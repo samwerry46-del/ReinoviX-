@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ReinoviX</title>
+<meta name="application-name" content="ReinoviX">
+<meta name="apple-mobile-web-app-title" content="ReinoviX">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#030C05">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEK0lEQVR42qVXTYgcRRT+XnX3zM7sZh032ayJribuQeJJInrIwZt60oOHCII3vUQFj7lJBA/uwZOeIwh7EwniXUQQzeISCKIIxqi44IKJq7M73V1dn4f+q+qunlnHgmZ6+lXX+/2+91oynREQ5IuAlPfWsnbYz9D1TDrknr1h600y/20cUjydrniWcR7DVH0r7i9dSafy5utH8No1gNPMPuKS+V9Vs8w80tmc30iVC8S7sypN2kXQcficRqjKBfsA0u8Y54wArauxQgc6nkNZ/SXk/yS7Y4XNMwUACy5wRJTZ4eUMmWdP2EwQLdASAGkquRLxY17mL8JGCuhwkjEGYRDkMgNkxkCJtHWyO4WO151F6FFOGoRRgN3xz7hy8wpup78iiBQMDZTKq4HGVMxNQ5D5lTN6m03rgqqrUrUQKAJDQgUKn9z4Hu9+9RZ2fvsaF17/CJ9fv4UgCnB3f4w0y6B6AVKd5Z70FFSkoHoKogSTNAENIUpgvMUhAAWSpRmbxWJIhFGAc5c3cfGpDK888TLefP8G1HKCrTeew+bVazi9OsLTFx7D3b/G0Frj9NoKYIAk1Ti1toIvd77DT709LC0O8fyD59GTsIJ33XOA0Elfw9Dhxhk8vP441lcfwKsvabz92XXAGBxMYvy+dwfvfXgNa8dHMMbgcBLjvhP34s/9fzC6ZwmjYICDjRTxeB/9XoR0ohEqVdQLK1VhifAWkggcnl3H5va3ODaOsfnNDnB8DBrBidExhIHC3+MDDAcLGC70sbI8xM0ff8FD95/E7d09rK4vQ+sJBoMBkiRXTjaISRwY2jWSDwDPMMHWF9t4cWsb/UdP4rUXziKIAly6+CxoiD/u7GNx0EcYBFjoRTh/bgNLgwUsLw4wjmOoUCFQCpIREgjYbLEEoBNN35XGmiT5ztWPOXzyEj/4dIckmcaaJsnI1JCGZEZSk0yK/+V9SjIhGRuaOGM2KS/NbKKpDzWzQ01JE00vRJkjIogUfri1i0fOnEKmjVVIOfTEnqCqWcb1Voqzmn2HACSNcwOamJWC/0kg6odIY+1nwo5JjsUzTmtgAkgap5zOnSwOk9wTH/XxP7TkKgj5ZlVxEmvL83tW4RKnRZchpL15hnI6Cuz0hE5O7SGU7Y7I0ghxoQSyCrdMGxXIlkCxc6ZoDCV0stJ6yw7ElPnD3w1Lj9pNyzVCKGDhLegzRqZWXBkhu+WrVmim9G6ihJ3MmL0aox2t9Fm1BRBhKRCpPfDaQ1gHdOS13C+0aJfeiihaQj0PsOmFlVSyI58dSeYRP8vqIqx0soakw1ztKXmWEnqtFscZljBkQZ82mVSpKWhVQEuxeAJa86cUH3ME88JFyYptGIZlLmhXse8jmR0ze2W0Xd9s4ajklYrEkCMqdAFEd4Zmu+hcKMGi5xljsON8LfsXX8eU9nCnfoAAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiUmVpbm92aVgiLCJzaG9ydF9uYW1lIjoiUmVpbm92aVgiLCJkaXNwbGF5Ijoic3RhbmRhbG9uZSIsImJhY2tncm91bmRfY29sb3IiOiIjMDMwQzA1IiwidGhlbWVfY29sb3IiOiIjMDMwQzA1Iiwic3RhcnRfdXJsIjoiLyIsImljb25zIjpbeyJzcmMiOiJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQUVBQUFBQkFDQVlBQUFDcWFYSGVBQUFPYmtsRVFWUjQycTFiYTR4ZFZSWCsxajUzYmgvVDZYTnMydElXMmxLb2hMY29VRkNreWlOQ1JhaUt5ZzhrUkVsQlk0d1lNY0ZYREVRME1ZMEowc1R3RmhBRVk2bFVCQXhTaW9pbEVMQWlvTFV0MEVMcGl3NHowNWw3ejltZlA4NXJ2ODY1ZHhvbmFUcHo3am43N01kYTMvcld0OWFWSk5hRW9Qd2hZUDNkNllmMm45THRNK0kvTzZiM1Nmajl3ZmVFbnMxK2J3RDBCNkd4SENIQTdQOThORmJ2bExrMnFac2dPenpJN2plOTlqb0RGL0pyRkNqV2pTbXdGMjN1b0VqeGtRU092OVlTWkl3TDYrWjU4enpFK09jTmJIK29wSEkyK2NJWlBtM3pzbUdPZ2hxRDZyUW9xVER6Ym54TGZQTXVweDE0bU9sa1ZYNlhoTjVVWlZJMHpJRUF5ZkFqckpnN0hZdnE1TE9oUTZ5em50Qm1tQXMzbnBFa1RwaTdoY2lZb0t5elZiTkxUQTJkK0tFQ1pBZlFjMzlVc1FEeEhNY2JTVUtMcG0rNVpMbHl3U0V1NUZEdkQxbFh6U21vOE1zWU5Ca2FHeUg1UjFMZUlzWm1FbzR2ZHV2L0lUTkdoOUFuQVR3SzRZclVXRUM1VVByK1JQdVBZb05OdUNDclhVTEdlSktIRWlXcURMZkQ1cXZPY0N6K0p0QzVXeklZcGJOWFl6RmhNbXpDSEVNWXJRUERpckVhWGhBbk10TGpqT0NZbGdUQWgxVkExRlVJay9Ea093RVphOXluNmpuam12SWNSOG9UQ0xtaGVSMnVVWmluZUNpV0lCWG1XOGNNcFlQVjFDeSt3Z1ZLdXc2eVVxbXdTcWJnSjVVVFpnY1hxSmhzdHlBYTJteDJkcEZHSitDakdDY3JVa0EvQzN3d2lCUXRrbFh2dUJ5TFA5TkZYSk8wakcxTTUzNEYwajlpbE91dDN0b2NIRTN3bzIyRjBpVUFkancyWnlDUkxrQTFNQ2FEVVVBQ0NZNlQ2SWdKQ0dJQm9ZZ3hIMGxOUjhEOFY5U21HaEl5M3hEQ2poSDFLemZRejN5VkhRVlk4YmprdnBCdGlFQWNXbDN1aTloQXdTNHNRR3I4djg2eEdkakFLdVN1c0J4Vndqb2RTSFhjS292MTFqdGxiSmJiRWZtbEEvQ1I5VGszYS9QNklPc01VR0V4R0I4cnRRc2FjMktkYVhjTGROSUZkWll1MFUwQ2k1V3FNR2pGVVUvMUtGWkowdnVFYnM1TG54SWZFb1U5cEF4cWpNcVR4d01LTkJNL0VYS3VseHRSSmtlYUdocmFVaGE2enVxSTdqR2o3bmtaQSs1NFVjQmljaXhqYlNoSll2NU95UXlIaUJvUm9rYVVPZzc1L3ptMVN1MlA0Ynk4V3gzUmVGNVpDM1JKQnQxcnRONnBkWHJpcXFHd2R0djl1Ry9yR3FoSUFSUm9YYy84Q3MyZ05tK3U0Yi81SVhtRXFZWUwwSThHRFFzVVJKd0p3U0k3NXJWRWF6UWFFU0F0M1BQNmFqejgxaHBzamFkaVo3d0wzMXA4SllBSVNVdERLUWxvY1ZMbVczVmN0b3J0U1FEWktkVVVuS0hNTFhQZkpOWU1pKzNwVFlXNFlhMUJJMnBFMkxyblBkeTY4UTRrMDlkaXgvQVVqRTRlajFjMmpzZWl0ejZKMWQ5Y2psa3orcURiT2gwamV5R3pNY1Zobk93Z3QxdkptRXJITTExTkFuUDNOOUFJOWF4TWhsaEdCQkhMZkNSZmdGSjRlY2ViT1B1bk4rR0ZiYnR4N09RK3pKd3dqQzFQejhHT2RTZGg3WVp0T1AvYWUvSHE5bmNoVVRwWjFhT2dlaFNpWmdUVmswYmZoQm9Fa1pEUVRNT3VKbFBPbGJrWW5RaEVFTzBraGlpQlVpcjlGeW1mU1VvQTI2ejBYa29Nb09tTFZseW1rMW1tRTFSS2NOdFR6MlA3ZjNkaDJzUUlpVFJ4OVRIWDQwY2YvZ2EwaXJGb2ZqK09YdHlQdTlhL0JGRUNpUVRmWFhVUHpycjAyN2prYXpmaWpSMjdvU0pCSTl1TVcrNWJoM1ZQYlN3M0tMT1lhRndFMVZSUURRVWxBbWtJOWc4TzRvZS8rRFZ1ZlBGM2VISFBWbXdiM0kzdnYvQWdFQUhheXRWWmhuVjNNNHFvSWJZRjBBMGxlUlNnRHl6alZCUHFZQy9pZzcyNGFPR05XTmg3Smk0NFl4NmV1T2xTckRoM0NaN2V2aE1qRXFWN3FRU3ZibjBMMTM3bHN6aG0wVHpjZk84amlKbmc5K3MyWUdob0JLZWZ0QVR6Wi9mam5YZjM0Wm5uTm1QZy9TR29wc0w2WjEvR3RqZDJZZS8rQVJ3WUhFTGNpckZyeno2Y3UvUmtMSmsyRjdlLy9pUldiMzRNQ3liT3lOeENPenFDN3dLV3drbW02WEFPOE1GQ2w5amNxQkJHV3dsME04Yk1hUi9FbE9hUkdCMXRRYmNGcHh3OUIydisvU2JlM2plQWlSTjZpcEdtVHBxSTVjdE94WXpwVTNEZnV2VzQrZTQvNEcvUHZvaC9iZCtCMmYzVE1UTGF3dG9ubjhYT2QvWml4UVZuNGZnbEMzSERxcnR4eElJNVdMeGdMbzVaTUJlTDVzL0JYUTgraHJseituSGR5aS9nZ2RmK2l2MGpnN2hoNlJlaFd4cVJLQnREekFnbnRpZlF4QUNyc0VHbklFUmo3NHdjVng5NU9MQjhHUTVNN1FVQVJCSWh5aEIvRkFsa2FvU2trUlRqRGd3ZHhFbWZ2Z1lyZjd3YTV5MDlBVTlzZUJGbm52RWhQUGZTYS9qUG03c3cwbXJqdU1VTDhNYzdmNElkNyt6Qm8zOStEby9jZVNNK3MrdzBET3gvSDIrOXN4ZFB2L0FLVGo3eGFMdzdNQWhSZ3NrOXZlanRtWWhJS1dpdExmTXRoVnNKQ04wR0Q4aUZEYThBNWtVK3V4Q1k5UFVDVTZiaG9WampPNCt1aDRvVW1zMEdibGl6Q1J0M2JnSDdEeUlaMXk1ZVBublNSSHp2NjVkaDBXRXpjZHhSQzlDT0V5Z0JMci9rSFBSUDYwT2NhRXlkM0llR0NDYU1hMEpyalFuTkhyVGFNWTVaUEI5N0I0Ynd6UFAveE1kT09SWU5yYkJsL3k0TXRvZlIwNGl3YWVjV05Kb05KTlFCZnBSdGhvVFZwMFlSUDNQY3FFaTJYQzZrNHhqUjhEQ0dOMjNCclFORG1MaG5BSy9IRFR5d1lUcytmbG9FMWJzZk9tb1h6N2RiYlZ5MDdEVHMyTFVIZHp6MEdNNWVlZ0wrc21FVHpqL3ZvK2liTUI2Nzk3NkhSR3NrMUJBQmxwNTZIRDUxeGZXSW1nMzhadFYxK05XRGoyUGN1Q2JtenBvQnREVlcvK054ckZoMEtxWlA2TVBObS8rRTIyWmZuUzVXeEhaWjFtdUREV3Qxd3VLMExZdXdnRFM5cDNsd0dNbkd2K1BrMmZQd2lRWHpzZXFXKy9IZVVTZGc3dmgrS04yQ0h0bVBIcFc2UUx1ZDRBY3JMMFVjeC9qcTU4N0hsamZleHNKNXM3Rm01blNjZnNxeG1EaCtIRVpHV3hBSXBrL3F4VFZmV282RlI4ekdCNmIwNGZBNU16Rnp4bFJjdGVJY3RKTUV6YWlCbFpkZmlJT1RZaHc1ZVJZaVVlZ2Yzd2ZkMGxDaXZKcU9WQ2xVT1NtTTJ6RmRKcGlDUHdObGw1Sks3aDRld3BXL2ZRaURldzlpOCtPYjhkNit2WmgwNHBtWTJ1N0Y3Qk1PWU1aY2hkc3Z2QUl6bXIwQWlhZ1pnWEdXTERVRWJHdElqL0lUbVpoQWowQ1BKbERqMGlpaVJ6VlVRNlhxUlZ0RG1ncElBQ1FwZDVCSWdiR3VJTTZoeW5ZcDZTay9TVEFZbG9nWFNTU3pxMW1UK3JEMnlzdnhrY05tWWQvdVBXZ0t3QU50dkx2N2ZWeDF5dWw0K1BQWFlPYjR2b0pBeGFNSlNFQ1RTRm9KTkluMlNJeWtsU0JwSittMWRubzlHVTBBRWNRak1aTFJCQ0tBanRON0FDQVpUWkRFU1paNElmdTlJdnVwcUE3bk1LbHEwK2VNb1pXaHBOUU0yKzBZYkduODdMS0w4Y3Zydm96VzBEQ0dEd3ppNXl2UHhCVm5uUXEwQlhHU0ZCS1ptUlBrVkRoU2ttWGhZaFJuODBJdG9KUXFxWGh4VC9wNVNwYU13cTVVc2I1eVZUbWp0QWgwM0lvNXByWWc1MlpOb3FmWndKb25ub1B1bVlDTHp6b2U3ZEVZU2dra0E5aVUvOE5HV0t0Mkx2N2ZSVG9lcU03UmxmQ2tkSGdHQ0ZBMkZwbTNRMG5KWjlxdG1LN1M3VXZ2WWNGVWtBNmFhSTNtK0pUMHRFYmk0bVJES1hvZVRvdkpkRjM4RUY4SGNEZkF6U0tMaitna3ZXVnlabXdBUzdVWE5hSFFrc0xLU2xDYS93dFVOOTBiZEg1MVBwZHNzZVVoMU5UR0FqV1R3bUpZVXlLa1dSbGl5WHdJV3ZrcDNhMFFNNmF3MkFabCtxR3UwZnFNVEpOVnM4dVRzTUlUaUpESTVNVW5Wb3RHckZDV1ZZSDhkVHRjZ2FxRk9XdTd0RTNRVVdSbytFTWdUMmQ0VVpXUnpPbklZS2dqaFBSOE1CZVJjaWdrc3loUWpzK0tFZDE4aWdGcnNIM00zQUg3ZEdyTTJSQkdTRE5rdVc0aXdWUDIxU1JCMVkzNW1oV2RGTUtVMnJ4ZGRwUWpHdnlZMllQTWhJMWlBaTZsOURROVd2cUQvWXB1eXIzMXdxZ1hPWXozME13R0NUZE1HZjVvbkI3cENJeWhTZW1jU1pxdUpYWW5pTnRRUVhiUXlDdUN0YVZrdXgrVnUwOFBhYlA5R0QzWW9rZ0hlSEdFU0JHL0JKNXJmZlp1TyswMFlwdTJUYjNERWMraUJkYlV4Rk9zclBBYytzVFZDWWtVdkgwVmxnR3lVcDRPNld2UEltNGFLZmFRVWwycll6RGNzK2hQWUxBRGxUVXR3d3pYRndKY1F2a2hvbE9WMW1ZQ2R1TWwvZllCcTJ6bWlzOStZNFlkKysxR0RaRXhGbzdFeHpFM3FDbXZTNFgxUFF0RlFRT0VRS3lUejVtaEZjc1ppQ3JtVG5qN1NpT3cwSzlyc0tZSVhGZVhwTkhOWmhRNEZVTWdRcis4VlZCSHA3cGo2dlAwaWc5bFpMRlB0Q3l2aWhtZ3E4clBBV2dYT3ZJV0NmT0xEd3owTUJ0blYzemVLTzJxdXA1ZDFmdHZoVkNhSlZPV3pLQ0lsRDZQcHdVem9UWnZDYjg0WjRaRmhwZ3hVdU03RFhaWjA3RWt3NjFWVFRlQ2ZUQTUxWlZBSlMxZ2MwVzJKUWI3ekxoQmZvZWdkQ1cvdVNCUVpMVmN4ejh3RmxicHJ0bXRlaU5VR1dLZzFzeGdHVnBjSUt0Rm9leVVIQ3dnUS9WdFAvNHpXT29xVjFnUUwwdkpaeUJXR01oc0xLQ1JnMXBocGxMaENxU2RnUmN0OWxMSjNXa3dNM0Z6a1VxV1N0dXlBb083emRsZUpNbi8xMGFUbCtHU3VZdVNaaFJnSG5NRGJaYkZMcGROTXpyQTB5M2dZVVVQaEpFbXNNdDZQb3Zza1pZS3hHREtseGNXNlgvamgzYmp2NkNpVTVTc2M0TWNza0lTcTYyMk1JRGdVbmwwOWMwTU5EUi9FUUYxMmJGbWF3bmhaaWl6Kzgra2U4cnJzM2U3M0JpdXNibk1MbGRkN0c0eUNVWVVFMFhkQ1JjcW1KU0VTSXpFcWpoNUNYRm1NMEdyQmo2ak5wcnhnRW9Nb2lzWUY0UkhBam05aWI0ZE5VYVRIVnB1VWJxYW4zaWx5bFBaYXdDclM4VE96K2dWaEVPOHFWSFZwVjdaWUpXcnNkUUJuU0p2cUxCeFFLejhQZk5DR3NKa1NDZGtmYTVnNlh4MCtyaWtaRHdXRjhqbmJpQ3l4UVBFRXk3Z2RXTGtZWWRPcUtOSDRTUVF3bDJ1S0paY1hjcGs0c1R3dW5ZUk1idDMzUyswR2FtTStCS0RDSlQxZ0tIRkZYWWpnWVZVQ1RxR1ZoK2kwVFk2T1ZvQmJJN0FJdTl3VE41OGw1dFhrZkRURDdFUEx4ZERzbnNiTUNTRGNyTGlwNWMwVWw3dnU3RkcwY0xaSlZOdUs1SWxzZDBqMkpmRjhDWmE1WHRQNDNUMGlBTGVDQW0wNnhlS2tOdGVrKys4V0JFekcwZ2NobWJRMW54eHJHaFZvK01DdEs2SkU3NnFGS0NBZEJyTU9PMTRUMFBCTmt0OEtxUUZpb2lubkZoZm9xQ3B1OUJocWZSN0VtZ25RS1Nyc1JqdVFMRWFvc0xSdzgxTVdTM0RtK0lNeFB0U2x5cGpyT2svNldscVU1L1hicE5FeGdaMW1ZRGs1bHlremg1WDBQVUtueG4ySlBSMVhvTXNGTm1rTGNBV0VqMVNzdVFaaFpPNi93L29hY3d0Tml3NkxnQUFBQUJKUlU1RXJrSmdnZz09Iiwic2l6ZXMiOiIxOTJ4MTkyIiwidHlwZSI6ImltYWdlL3BuZyJ9XX0=">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--bg:#030C05;--card:#0C1E0F;--border:rgba(74,222,128,0.15);--border2:rgba(74,222,128,0.28);--green:#4ADE80;--green3:#16A34A;--gdim:rgba(74,222,128,0.12);--text:#F0FDF4;--muted:#5A8A6A;--muted2:#1E3D26;--red:#F87171;--amber:#FCD34D}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);height:100vh;overflow:hidden;background-image:radial-gradient(ellipse 80% 50% at 90% 0%,rgba(20,83,45,.5),transparent 60%),radial-gradient(ellipse 50% 60% at 5% 90%,rgba(20,83,45,.35),transparent 60%)}
+#app{display:flex;flex-direction:column;height:100vh;overflow:hidden;transition:opacity 0.3s ease;}
+.hdr{background:rgba(3,12,5,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);flex-shrink:0;padding:0 16px}
+.hdr-top{display:flex;align-items:center;justify-content:space-between;padding:12px 0 4px}
+.logo{display:flex;align-items:center;gap:8px;font-size:18px;font-weight:800}
+.hbtn{background:rgba(74,222,128,.08);border:1px solid var(--border2);border-radius:10px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px}
+.ttabs{display:flex;overflow-x:auto;margin-bottom:-1px}
+.ttabs::-webkit-scrollbar{display:none}
+.ttab{background:none;border:none;font-family:Inter,sans-serif;font-size:13px;font-weight:500;color:var(--muted);padding:10px 14px;cursor:pointer;position:relative;white-space:nowrap;flex-shrink:0}
+.ttab.on{color:var(--green);font-weight:700}
+.ttab.on::after{content:"";position:absolute;bottom:0;left:6px;right:6px;height:2px;background:var(--green);border-radius:2px 2px 0 0}
+.scrl{flex:1;overflow-y:auto;padding:14px 14px 110px}
+.scrl::-webkit-scrollbar{display:none}
+.page{display:none}.page.on{display:block}
+.bnav{position:fixed;bottom:0;left:0;right:0;background:rgba(3,12,5,.96);backdrop-filter:blur(20px);border-top:1px solid var(--border);display:flex;padding:6px 0 calc(6px + env(safe-area-inset-bottom));z-index:50}
+.nbtn{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;cursor:pointer;padding:5px 0}
+.npill{width:44px;height:26px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:17px;border:1px solid transparent}
+.nbtn.on .npill{background:rgba(74,222,128,.15);border-color:rgba(74,222,128,.3)}
+.nlbl{font-size:10px;font-weight:600;color:var(--muted);font-family:Inter,sans-serif}
+.nbtn.on .nlbl{color:var(--green)}
+.fab{position:fixed;bottom:80px;right:16px;width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--green3),var(--green));border:none;font-size:26px;color:#000;cursor:pointer;box-shadow:0 4px 0 #14532D,0 0 20px rgba(74,222,128,.35);display:none;align-items:center;justify-content:center;z-index:49}
+.fab:active{transform:translateY(4px);box-shadow:0 0 0 #14532D}
+.card{background:rgba(12,30,15,.82);border:1px solid var(--border);border-radius:14px}
+.p14{padding:14px}.p16{padding:16px}
+.greeting{margin-bottom:14px}
+.greeting h1{font-size:24px;font-weight:800;letter-spacing:-.5px}
+.greeting p{font-size:13px;color:var(--muted);margin-top:2px}
+.bbc{margin-bottom:16px}
+.bbc-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px}
+.bbc-spent{font-size:18px;font-weight:800}
+.bbc-spent span{font-size:13px;font-weight:400;color:var(--muted)}
+.bbc-right{display:flex;align-items:center;gap:10px}
+.bbc-pct{font-size:24px;font-weight:900;color:var(--green);letter-spacing:-1px}
+.bbc-sep{width:1px;height:32px;background:var(--border2)}
+.bbc-days .n{font-size:18px;font-weight:800;text-align:right}
+.bbc-days .l{font-size:10px;color:var(--muted);text-align:right}
+.prog{height:7px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden}
+.pf{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--green3),var(--green));box-shadow:0 0 8px rgba(74,222,128,.4);transition:width 1s ease}
+.stitle{font-size:16px;font-weight:700;margin-bottom:10px}
+.pcard{margin-bottom:12px;cursor:pointer}
+.pcard-body{display:flex;min-height:130px}
+.pthumb{width:120px;flex-shrink:0;position:relative;overflow:hidden;background:#1E3D26;border-radius:14px 0 0 0}
+.pphoto{width:120px;height:100%;min-height:130px;background-size:cover;background-position:center;background-color:#1E3D26}
+.proom-tag{position:absolute;top:8px;left:8px;background:rgba(3,12,5,.88);border:1px solid rgba(74,222,128,.3);color:var(--green);font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px}
+.pinfo{flex:1;padding:12px 12px 8px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.pname-row{display:flex;align-items:flex-start;justify-content:space-between}
+.pname{font-size:16px;font-weight:800;letter-spacing:-.3px}
+.pdot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 8px rgba(74,222,128,.8);flex-shrink:0;margin-top:4px}
+.pspent-big{font-size:17px;font-weight:800;color:var(--green);letter-spacing:-.4px}
+.pspent-of{color:var(--muted);font-size:13px}
+.ppct{float:right;font-size:19px;font-weight:900;letter-spacing:-.5px}
+.pbar{height:5px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden;margin:2px 0}
+.pbar-fill{height:100%;background:linear-gradient(90deg,var(--green3),var(--green));border-radius:3px;transition:width 1s ease}
+.pfull{font-size:12px;color:var(--muted)}
+.pfooter{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-top:1px solid var(--border);background:rgba(0,0,0,.15)}
+.pip{display:flex;align-items:center;gap:6px}
+.pip-dot{width:16px;height:16px;border-radius:50%;background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3);display:flex;align-items:center;justify-content:center;font-size:9px}
+.pip-txt{font-size:12px;font-weight:700;color:var(--green)}
+.ptasks{font-size:11px;color:var(--muted);margin-left:6px}
+.pest{font-size:12px;font-weight:700;color:var(--green)}
+.add-proj{border:1.5px dashed rgba(74,222,128,.22);border-radius:14px;padding:20px;text-align:center;cursor:pointer}
+.bsummary{text-align:center}
+.btotal{font-size:38px;font-weight:900;letter-spacing:-2px;margin:8px 0}
+.bsplit{display:flex;margin-top:14px;padding-top:14px;border-top:1px solid var(--border)}
+.bsi{flex:1;text-align:center}
+.bsi+.bsi{border-left:1px solid var(--border)}
+.bsi-n{font-size:19px;font-weight:800;letter-spacing:-.5px}
+.bsi-l{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:2px}
+.erow{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--border)}
+.erow:last-child{border-bottom:none}
+.eicon{width:38px;height:38px;border-radius:11px;background:var(--gdim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.edesc{font-size:13px;font-weight:600}
+.emeta{font-size:11px;color:var(--muted);margin-top:1px}
+.eamt{font-size:14px;font-weight:800;color:var(--green);white-space:nowrap}
+.phase{margin-bottom:14px}
+.ph-hdr{display:flex;align-items:center;gap:10px;padding:11px 16px;background:rgba(74,222,128,.06);border:1px solid var(--border);border-radius:12px 12px 0 0;border-bottom:none}
+.ph-name{font-size:14px;font-weight:700;flex:1}
+.ph-ct{font-size:12px;color:var(--green);font-weight:600}
+.citems{background:rgba(12,30,15,.82);border:1px solid var(--border);border-top:none;border-radius:0 0 12px 12px}
+.citem{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);cursor:pointer}
+.citem:last-child{border-bottom:none}
+.cbox{width:22px;height:22px;border-radius:6px;border:2px solid var(--muted2);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;transition:all .2s}
+.citem.done .cbox{background:var(--green);border-color:var(--green);color:#000;font-weight:800}
+.ctxt{font-size:13px;flex:1}
+.citem.done .ctxt{opacity:.35;text-decoration:line-through}
+.csub{font-size:11px;color:var(--muted);margin-top:2px}
+.ai-hero{background:linear-gradient(135deg,#071209,#0A1E0D);border:1px solid var(--border2);border-radius:14px;padding:20px;margin-bottom:14px;position:relative;overflow:hidden}
+.ai-hero::after{content:"✦";position:absolute;top:-20px;right:16px;font-size:110px;opacity:.04;color:var(--green)}
+.badge{display:inline-flex;align-items:center;background:var(--gdim);border:1px solid var(--border2);color:var(--green);padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:10px}
+.chip{display:inline-block;padding:7px 13px;border-radius:20px;font-size:12px;font-weight:600;background:rgba(12,30,15,.9);border:1px solid var(--border2);color:var(--muted);cursor:pointer;margin:0 4px 6px 0;font-family:Inter,sans-serif}
+.chip.on{background:var(--gdim);border-color:rgba(74,222,128,.4);color:var(--green)}
+.flabel{display:block;font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.finput,.fsel,.ftarea{width:100%;background:rgba(12,30,15,.9);border:1px solid var(--border2);border-radius:12px;padding:11px 13px;color:var(--text);font-family:Inter,sans-serif;font-size:14px;-webkit-appearance:none}
+.finput:focus,.fsel:focus,.ftarea:focus{outline:none;border-color:var(--green)}
+.finput::placeholder,.ftarea::placeholder{color:var(--muted2)}
+.fsel option{background:#071209}
+.ftarea{resize:none;line-height:1.6}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fgroup{margin-bottom:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:12px 18px;border-radius:13px;font-family:Inter,sans-serif;font-size:14px;font-weight:700;cursor:pointer;border:none;width:100%}
+.btn-g{background:linear-gradient(135deg,var(--green3),var(--green));color:#000;box-shadow:0 4px 0 #14532D}
+.btn-g:active{transform:translateY(3px);box-shadow:0 1px 0 #14532D}
+.btn-gh{background:rgba(255,255,255,.05);color:var(--text);border:1px solid var(--border2);box-shadow:0 4px 0 rgba(0,0,0,.4)}
+.btn-gh:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.4)}
+.btn-r{background:rgba(248,113,113,.1);color:var(--red);border:1px solid rgba(248,113,113,.3)}
+.overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);align-items:flex-end;justify-content:center}
+.overlay.on{display:flex}
+.modal{background:#071209;border:1px solid var(--border2);border-radius:24px 24px 0 0;padding:20px 18px 40px;width:100%;max-width:480px;max-height:90vh;overflow-y:auto;animation:slideup .3s ease}
+.modal::-webkit-scrollbar{display:none}
+@keyframes slideup{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.mhandle{width:36px;height:4px;background:var(--muted2);border-radius:2px;margin:0 auto 18px}
+.mtitle{font-size:19px;font-weight:800;margin-bottom:16px;letter-spacing:-.3px}
+.mfooter{display:flex;gap:10px;margin-top:18px}
+.mfooter .btn{flex:1}
+.prem-hero{background:linear-gradient(135deg,#030C05,#071A0A);border:1px solid var(--border2);border-radius:14px;padding:22px 18px;margin-bottom:14px;position:relative;overflow:hidden}
+.prem-hero::after{content:"👑";position:absolute;top:-8px;right:8px;font-size:100px;opacity:.06}
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.plan-card{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:13px;padding:14px;cursor:pointer;text-align:center}
+.plan-card.on{background:var(--gdim);border-color:rgba(74,222,128,.4)}
+.feat-row{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--border)}
+.feat-row:last-child{border-bottom:none}
+.feat-icon{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.dtabs{display:flex;gap:8px;margin-bottom:12px}
+.dtab{flex:1;padding:9px;border-radius:11px;border:1px solid var(--border);background:rgba(12,30,15,.8);color:var(--muted);font-family:Inter,sans-serif;font-size:12px;font-weight:700;cursor:pointer;text-align:center}
+.dtab.on{background:var(--gdim);border-color:rgba(74,222,128,.4);color:var(--green)}
+.titem{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);cursor:pointer}
+.titem:last-child{border-bottom:none}
+.tbox{width:22px;height:22px;border-radius:6px;border:2px solid var(--muted2);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;transition:all .18s}
+.titem.done .tbox{background:var(--green);border-color:var(--green);color:#000;font-weight:800}
+.titem.done .ttxt{opacity:.38;text-decoration:line-through}
+.ttxt{font-size:13px;flex:1}
+.inspo-scroll{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px}
+.inspo-scroll::-webkit-scrollbar{display:none}
+.ipill{flex-shrink:0;width:122px;height:148px;border-radius:14px;overflow:hidden;position:relative;cursor:pointer;border:1px solid var(--border)}
+.ipill img{width:100%;height:100%;object-fit:cover}
+.ipill-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8),transparent 60%);display:flex;align-items:flex-end;padding:9px}
+.ipill-lbl{font-size:12px;font-weight:700}
+.tool-tabs{display:flex;gap:8px;margin-bottom:12px}
+.ttab2{flex-shrink:0;padding:8px 14px;border-radius:20px;font-family:Inter,sans-serif;font-size:12px;font-weight:700;cursor:pointer;border:1px solid var(--border2);background:rgba(12,30,15,.8);color:var(--muted)}
+.ttab2.on{background:var(--gdim);border-color:rgba(74,222,128,.4);color:var(--green)}
+.qmat{background:rgba(12,30,15,.9);border:1px solid var(--border);border-radius:12px;padding:11px;cursor:pointer;text-align:left}
+.lock-wrap{position:relative}
+.lock-over{position:absolute;inset:0;z-index:10;background:rgba(3,12,5,.9);backdrop-filter:blur(6px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;cursor:pointer;border-radius:14px}
+.url-box{display:flex;align-items:center;gap:10px;background:rgba(12,30,15,.9);border:1px solid var(--border2);border-radius:11px;padding:11px 13px;margin-bottom:12px}
+.url-txt{flex:1;font-size:12px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.copy-btn{background:var(--gdim);color:var(--green);border:1px solid rgba(74,222,128,.3);border-radius:8px;padding:5px 11px;font-size:11px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif;white-space:nowrap}
+.share-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.sbtn{display:flex;align-items:center;gap:10px;padding:13px;background:rgba(12,30,15,.9);border:1px solid var(--border2);border-radius:13px;cursor:pointer;font-family:Inter,sans-serif;color:var(--text);font-size:13px;font-weight:600}
+.swatches{display:flex;gap:8px;margin:8px 0 14px}
+.swatch{width:46px;height:46px;border-radius:11px;border:1px solid var(--border)}
+.mat-tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
+.mat-tag{background:rgba(12,30,15,.9);border:1px solid var(--border2);color:var(--muted);font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px}
+#compare-wrap{position:relative;width:100%;aspect-ratio:1;border-radius:13px;overflow:hidden;touch-action:none;user-select:none}
+.acc-row{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--border);cursor:pointer}
+.acc-row:last-child{border-bottom:none}
+.acc-row-icon{width:36px;height:36px;border-radius:10px;background:var(--gdim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.acc-row-body{flex:1;min-width:0}
+.acc-row-label{font-size:13px;font-weight:600}
+.acc-row-val{font-size:12px;color:var(--muted);margin-top:1px}
+.acc-row-arrow{font-size:18px;color:var(--muted)}
+.toggle{width:42px;height:24px;border-radius:12px;background:var(--muted2);position:relative;flex-shrink:0;transition:background .2s}
+.toggle::after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:white;top:3px;left:3px;transition:transform .2s}
+.toggle.on{background:var(--green)}
+.toggle.on::after{transform:translateX(18px)}
+.lang-btn{display:flex;align-items:center;gap:14px;width:100%;padding:12px 14px;background:rgba(12,30,15,.9);border:1px solid var(--border2);border-radius:12px;color:var(--text);font-family:Inter,sans-serif;font-size:13px;font-weight:600;cursor:pointer;text-align:left;margin-bottom:6px}
+.lang-btn.sel{background:var(--gdim);border-color:rgba(74,222,128,.4)}
+.lang-flag{font-size:22px;flex-shrink:0}
+.lang-name{flex:1}
+.lang-native{font-size:11px;color:var(--muted);margin-top:1px}
+.lang-check{color:var(--green);font-size:16px;font-weight:800}
+.prem-banner{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;margin-bottom:12px;cursor:pointer;background:var(--gdim);border:1px solid rgba(74,222,128,.22)}
+.curr-btn{display:block;width:100%;padding:13px 16px;background:rgba(12,30,15,.9);border:1px solid var(--border2);border-radius:12px;color:var(--text);font-family:Inter,sans-serif;font-size:13px;font-weight:600;cursor:pointer;text-align:left;margin-bottom:6px}
+#toast{position:fixed;top:74px;left:50%;transform:translateX(-50%);background:rgba(12,30,15,.97);border:1px solid var(--border2);color:var(--text);padding:9px 18px;border-radius:20px;font-size:13px;font-weight:600;z-index:999;opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+
+#auth-screen{transition:opacity 0.25s ease;}
+#app{transition:opacity 0.25s ease;}
+#auth-screen .finput{background:rgba(3,12,5,.8);border-color:rgba(74,222,128,.2)}
+#auth-screen .finput:focus{border-color:var(--green)}
+
+
+#loading-screen{position:fixed;inset:0;z-index:9999;background:#030C05;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:opacity 0.3s ease;}
+#loading-screen.hide{opacity:0;pointer-events:none;}
+.load-spinner{width:40px;height:40px;border:3px solid rgba(74,222,128,0.2);border-top-color:#4ADE80;border-radius:50%;animation:spin 0.8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+#loading-screen .load-txt{color:#4ADE80;font-size:14px;font-weight:600;font-family:Inter,sans-serif;}
+</style>
+
+  <!-- Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    import { getFirestore, doc, setDoc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCD8EOXXnWnEWgjZpbOoEOuUkH9_CO1KkY",
+      authDomain: "reinovetor.firebaseapp.com",
+      projectId: "reinovetor",
+      storageBucket: "reinovetor.firebasestorage.app",
+      messagingSenderId: "639525344900",
+      appId: "1:639525344900:web:95de899c7e712b836694d1"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    const googleProvider = new GoogleAuthProvider();
+
+    window.fbAuth = auth;
+    window.fbDb = db;
+    window.fbGoogleProvider = googleProvider;
+    window.fbFns = {
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged,
+      signInWithPopup,
+      signInWithRedirect,
+      getRedirectResult,
+      sendPasswordResetEmail,
+      doc, setDoc, getDoc, updateDoc
+    };
+
+    // Handle Google redirect result
+    getRedirectResult(auth).then((result) => {
+      if (result && result.user) {
+        window.fbSaveNewUser(result.user, result.user.displayName || 'User');
+      }
+    }).catch(() => {});
+
+    // ONE auth state listener - controls everything
+    onAuthStateChanged(auth, (user) => {
+      var authEl = document.getElementById('auth-screen');
+      var appEl = document.getElementById('app');
+      var statusEl = document.getElementById('firebase-status');
+      if (statusEl) statusEl.style.display = 'none';
+
+      if (user) {
+        window.currentUser = user;
+        // Load data then show app
+        window.fbLoadAndShow(user.uid);
+      } else {
+        window.currentUser = null;
+        // Show auth screen, hide loading
+        var loadEl = document.getElementById('loading-screen');
+        appEl.style.display = 'none';
+        authEl.style.display = 'flex';
+        requestAnimationFrame(function(){
+          authEl.style.opacity = '1';
+          if(loadEl){ loadEl.classList.add('hide'); setTimeout(function(){loadEl.style.display='none';},350); }
+        });
+      }
+    });
+</script>
+
+</head>
+<body>
+<!-- AUTH SCREEN -->
+<div id="auth-screen" style="position:fixed;inset:0;z-index:999;display:none;flex-direction:column;align-items:center;justify-content:center;background:var(--bg);background-image:radial-gradient(ellipse 80% 50% at 90% 0%,rgba(20,83,45,.5),transparent 60%),radial-gradient(ellipse 50% 60% at 5% 90%,rgba(20,83,45,.35),transparent 60%);padding:16px">
+
+  <img src="data:image/png;base64,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" style="width:64px;height:64px;object-fit:contain;margin-bottom:8px;border-radius:14px">
+  <div style="font-size:22px;font-weight:900;letter-spacing:-.5px;margin-bottom:2px">ReinoviX</div>
+  <div style="font-size:11px;color:var(--muted);margin-bottom:16px">Your renovation command center</div>
+
+  <div style="width:100%;max-width:380px;background:rgba(12,30,15,.95);border:1px solid var(--border2);border-radius:20px;padding:16px">
+
+    <!-- Tabs -->
+    <div style="display:flex;background:rgba(0,0,0,.3);border-radius:10px;padding:3px;margin-bottom:14px">
+      <button id="login-tab" onclick="authTab('login')" style="flex:1;padding:8px;border-radius:8px;border:none;font-family:Inter,sans-serif;font-size:13px;font-weight:700;cursor:pointer;background:var(--green);color:#000;transition:all .2s">Sign In</button>
+      <button id="signup-tab" onclick="authTab('signup')" style="flex:1;padding:8px;border-radius:8px;border:none;font-family:Inter,sans-serif;font-size:13px;font-weight:700;cursor:pointer;background:transparent;color:var(--muted);transition:all .2s">Sign Up</button>
+    </div>
+
+    <!-- Error -->
+    <div id="auth-error" style="display:none;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);border-radius:8px;padding:8px 12px;font-size:11px;color:var(--red);margin-bottom:10px"></div>
+
+    <!-- Name (signup only) -->
+    <div id="signup-name-group" style="display:none;margin-bottom:8px">
+      <input id="auth-name" class="finput" placeholder="Full name" type="text" style="padding:10px 12px;font-size:13px">
+    </div>
+
+    <!-- Email -->
+    <div style="margin-bottom:8px">
+      <input id="auth-email" class="finput" placeholder="Email address" type="email" style="padding:10px 12px;font-size:13px" onkeydown="if(event.key==='Enter')authSubmit()">
+    </div>
+
+    <!-- Password -->
+    <div style="margin-bottom:6px">
+      <input id="auth-password" class="finput" placeholder="Password (min. 6 chars)" type="password" style="padding:10px 12px;font-size:13px" onkeydown="if(event.key==='Enter')authSubmit()">
+    </div>
+
+    <!-- Forgot -->
+    <div id="forgot-wrap" style="text-align:right;margin-bottom:12px">
+      <button onclick="forgotPassword()" style="background:none;border:none;color:var(--green);font-size:11px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif">Forgot password?</button>
+    </div>
+
+    <!-- Submit -->
+    <button id="auth-submit-btn" onclick="authSubmit()" class="btn btn-g" style="font-size:14px;padding:12px;margin-bottom:10px">Sign In</button>
+    <div id="firebase-status" style="text-align:center;font-size:11px;color:var(--muted);margin-top:-6px;margin-bottom:6px">⏳ Connecting to server...</div>
+
+    <!-- Divider -->
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+      <div style="flex:1;height:1px;background:var(--border)"></div>
+      <div style="font-size:10px;color:var(--muted);font-weight:600">OR</div>
+      <div style="flex:1;height:1px;background:var(--border)"></div>
+    </div>
+
+    <!-- Google -->
+    <button onclick="signInGoogle()" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:11px;background:white;border:none;border-radius:11px;font-family:Inter,sans-serif;font-size:13px;font-weight:700;color:#1f1f1f;cursor:pointer">
+      <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      Continue with Google
+    </button>
+  </div>
+
+  <div style="margin-top:12px;font-size:10px;color:var(--muted2);text-align:center">By continuing you agree to our Terms & Privacy Policy</div>
+</div>
+
+<div id="loading-screen">
+  <div class="load-spinner"></div>
+  <div class="load-txt">Loading ReinoviX...</div>
+</div>
+<div id="app" style="display:flex;opacity:0;visibility:hidden;">
+  <div class="hdr">
+    <div class="hdr-top">
+      <div class="logo"><span>🏠</span>ReinoviX</div>
+      <div style="display:flex;gap:8px">
+        <div class="hbtn" onclick="openModal('share-modal')">📤</div>
+        <div class="hbtn" onclick="goAccount()">⚙️</div>
+      </div>
+    </div>
+    <div class="ttabs">
+      <button class="ttab on" data-p="projects" onclick="switchTab('projects',this)" id="tab-projects" data-i18n="projects">Projects</button>
+      <button class="ttab" data-p="budget" onclick="switchTab('budget',this)" id="tab-budget" data-i18n="budget">Budget</button>
+      <button class="ttab" data-p="ai" onclick="switchTab('ai',this)" id="tab-ai" data-i18n="ai">AI Design</button>
+      <button class="ttab" data-p="checklist" onclick="switchTab('checklist',this)" id="tab-checklist" data-i18n="checklist">Checklist</button>
+    </div>
+  </div>
+  <div class="scrl" id="scrl">
+
+    <!-- PROJECTS -->
+    <div id="pg-projects" class="page on">
+      <div class="greeting"><h1 id="greeting-text">Good morning</h1><p id="greeting-sub">Your renovation command center</p></div>
+      <div class="card p14 bbc">
+        <div class="bbc-row">
+          <div class="bbc-spent" id="h-spent">$0 <span>spent of $0</span></div>
+          <div class="bbc-right">
+            <div class="bbc-pct" id="h-pct">0%</div>
+            <div class="bbc-sep"></div>
+            <div class="bbc-days"><div class="n">11</div><div class="l" id="days-left-lbl" data-i18n="days_left">Days Left</div></div>
+          </div>
+        </div>
+        <div class="prog"><div class="pf" id="h-bar" style="width:0%"></div></div>
+      </div>
+      <div class="stitle" id="your-projects-title" data-i18n="your_projects">Your Projects</div>
+      <div id="limit-banner"></div>
+      <div id="proj-list"></div>
+      <div class="add-proj" onclick="openModal('new-proj-modal')">
+        <div style="font-size:22px;color:var(--green);margin-bottom:5px">＋</div>
+        <div style="font-size:12px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:1px" id="add-proj-lbl" data-i18n="add_project">New Project</div>
+      </div>
+    </div>
+
+    <!-- BUDGET -->
+    <div id="pg-budget" class="page">
+      <div class="card p16 bsummary" style="margin-bottom:14px">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:600" id="total-budget-lbl" data-i18n="total_budget">Total Budget</div>
+        <div class="btotal" id="b-total">$0</div>
+        <div class="prog"><div class="pf" id="b-bar" style="width:0%"></div></div>
+        <div class="bsplit">
+          <div class="bsi"><div class="bsi-n" id="b-spent" style="color:var(--red)">$0</div><div class="bsi-l" id="spent-lbl" data-i18n="spent">Spent</div></div>
+          <div class="bsi"><div class="bsi-n" id="b-left" style="color:var(--green)">$0</div><div class="bsi-l" id="remaining-lbl" data-i18n="remaining">Remaining</div></div>
+        </div>
+      </div>
+      <div class="stitle" id="by-project-title" data-i18n="by_project">By Project</div>
+      <div class="card" style="margin-bottom:14px;overflow:hidden" id="b-by-proj"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <div class="stitle" style="margin:0" id="expenses-title" data-i18n="expenses">Expenses</div>
+        <button onclick="exportData()" style="background:none;border:none;color:var(--green);font-size:12px;font-weight:700;cursor:pointer;font-family:Inter,sans-serif">📄 Export</button>
+      </div>
+      <div class="card" style="overflow:hidden" id="exp-list"></div>
+    </div>
+
+    <!-- AI -->
+    <div id="pg-ai" class="page">
+      <div class="ai-hero">
+        <div class="badge">✦ AI Powered</div>
+        <div style="font-size:21px;font-weight:900;letter-spacing:-.5px;margin-bottom:6px" id="ai-studio-title">AI Design Studio</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6" id="ai-studio-sub">Get a full design plan for any room.</div>
+      </div>
+      <div class="card p16 lock-wrap" style="margin-bottom:14px" id="ai-card">
+        <div class="frow" style="margin-bottom:12px">
+          <div class="fgroup" style="margin:0"><label class="flabel" id="room-lbl">Room</label><select class="fsel" id="ai-room"><option>Kitchen</option><option>Bathroom</option><option>Living Room</option><option>Bedroom</option><option>Home Office</option></select></div>
+          <div class="fgroup" style="margin:0"><label class="flabel" id="budget-lbl2">Budget</label><select class="fsel" id="ai-budget"><option>Under $5k</option><option>$5k-$15k</option><option>$15k-$30k</option><option>$30k-$60k</option><option>$60k+</option></select></div>
+        </div>
+        <div class="fgroup" style="margin-bottom:12px"><label class="flabel" id="style-lbl">Style</label><div id="chips"><span class="chip" onclick="this.classList.toggle('on')">Modern</span><span class="chip" onclick="this.classList.toggle('on')">Minimalist</span><span class="chip" onclick="this.classList.toggle('on')">Scandinavian</span><span class="chip" onclick="this.classList.toggle('on')">Industrial</span><span class="chip" onclick="this.classList.toggle('on')">Bohemian</span><span class="chip" onclick="this.classList.toggle('on')">Luxury</span></div></div>
+        <div class="fgroup" style="margin-bottom:14px"><label class="flabel" id="vision-lbl">Vision</label><textarea class="ftarea" id="ai-vision" rows="3" placeholder="Describe your dream space..."></textarea></div>
+        <button onclick="generateDesign()" class="btn btn-g" id="ai-btn" style="font-size:15px;padding:14px">✦ Generate Design Plan</button>
+      </div>
+      <div id="ai-result"></div>
+    </div>
+
+    <!-- CHECKLIST -->
+    <div id="pg-checklist" class="page">
+      <div class="card p14" style="margin-bottom:14px">
+        <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin-bottom:7px"><span style="color:var(--muted)" id="overall-progress-lbl" data-i18n="overall_progress">Overall Progress</span><span id="ck-pct" style="color:var(--green)">0%</span></div>
+        <div class="prog"><div class="pf" id="ck-bar" style="width:0%"></div></div>
+        <div id="ck-lbl" style="font-size:12px;color:var(--muted);margin-top:7px">0 / 15</div>
+      </div>
+      <div id="ck-items"></div>
+    </div>
+
+    <!-- INSPIRE -->
+    <div id="pg-inspire" class="page">
+      <div class="stitle">Inspiration</div>
+      <div class="inspo-scroll">
+        <div class="ipill" onclick="openInspo('Modern','🛋️','Clean lines, neutral tones, statement lighting.')"><img src="https://picsum.photos/id/116/300/200" loading="lazy"><div class="ipill-ov"><div class="ipill-lbl">Modern</div></div></div>
+        <div class="ipill" onclick="openInspo('Biophilic','🌿','Plants, wood, stone — nature indoors.')"><img src="https://picsum.photos/id/145/300/200" loading="lazy"><div class="ipill-ov"><div class="ipill-lbl">Biophilic</div></div></div>
+        <div class="ipill" onclick="openInspo('Scandinavian','🪵','Warm woods, cozy textiles, white walls.')"><img src="https://picsum.photos/id/210/300/200" loading="lazy"><div class="ipill-ov"><div class="ipill-lbl">Scandinavian</div></div></div>
+        <div class="ipill" onclick="openInspo('Luxury','✨','Premium materials, bespoke design.')"><img src="https://picsum.photos/id/239/300/200" loading="lazy"><div class="ipill-ov"><div class="ipill-lbl">Luxury</div></div></div>
+        <div class="ipill" onclick="openInspo('Coastal','🌊','Light blues, whites, rattan, linen.')"><img src="https://picsum.photos/id/326/300/200" loading="lazy"><div class="ipill-ov"><div class="ipill-lbl">Coastal</div></div></div>
+      </div>
+    </div>
+
+    <!-- TOOLS -->
+    <div id="pg-tools" class="page">
+      <div class="stitle">🔧 Tools</div>
+      <div class="tool-tabs">
+        <button class="ttab2 on" onclick="switchTool('room',this)">📐 Room Calc</button>
+        <button class="ttab2" onclick="switchTool('mat',this)">🪵 Materials</button>
+        <button class="ttab2" onclick="switchTool('ba',this)">📸 Before/After</button>
+      </div>
+      <div id="tool-room">
+        <div class="card p16" style="margin-bottom:14px">
+          <div class="frow" style="margin-bottom:10px">
+            <div class="fgroup" style="margin:0"><label class="flabel">Length (ft)</label><input class="finput" id="rl" type="number" placeholder="20" oninput="calcRoom()" style="font-size:18px;font-weight:700;text-align:center"></div>
+            <div class="fgroup" style="margin:0"><label class="flabel">Width (ft)</label><input class="finput" id="rw" type="number" placeholder="15" oninput="calcRoom()" style="font-size:18px;font-weight:700;text-align:center"></div>
+          </div>
+          <button onclick="calcRoom()" class="btn btn-g">Calculate</button>
+        </div>
+        <div id="room-res" style="display:none">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div class="card p14" style="text-align:center"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:6px">Floor Area</div><div style="font-size:24px;font-weight:900;color:var(--green)" id="r-area">-</div><div style="font-size:10px;color:var(--muted)">sq ft</div></div>
+            <div class="card p14" style="text-align:center"><div style="font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:6px">Paint Needed</div><div style="font-size:24px;font-weight:900;color:#60A5FA" id="r-paint">-</div><div style="font-size:10px;color:var(--muted)">gallons</div></div>
+          </div>
+        </div>
+      </div>
+      <div id="tool-mat" style="display:none">
+        <div class="card p16" style="margin-bottom:14px">
+          <div id="mat-rows"></div>
+          <button onclick="addMatRow()" style="width:100%;padding:11px;border:1.5px dashed rgba(74,222,128,.22);border-radius:12px;background:transparent;color:var(--green);font-family:Inter,sans-serif;font-size:13px;font-weight:700;cursor:pointer;margin-bottom:12px">+ Add Material</button>
+          <div style="background:var(--gdim);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:13px;display:flex;justify-content:space-between;align-items:center">
+            <div><div style="font-size:10px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1px">Total</div><div style="font-size:28px;font-weight:900;color:var(--green);letter-spacing:-1px" id="mat-total">$0.00</div></div>
+            <button onclick="toast('Estimate saved!')" class="btn btn-g" style="width:auto;padding:10px 16px;font-size:13px">💾 Save</button>
+          </div>
+        </div>
+        <div class="card p16">
+          <div style="font-size:13px;font-weight:700;margin-bottom:10px">⚡ Quick Add</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <button onclick="quickMat('Hardwood','sq ft',5.50)" class="qmat"><div style="font-size:13px;font-weight:700">🪵 Hardwood</div><div style="font-size:11px;color:var(--muted)">$5.50/sq ft</div></button>
+            <button onclick="quickMat('Ceramic Tile','sq ft',3.25)" class="qmat"><div style="font-size:13px;font-weight:700">🔲 Ceramic Tile</div><div style="font-size:11px;color:var(--muted)">$3.25/sq ft</div></button>
+            <button onclick="quickMat('Paint','gallon',45)" class="qmat"><div style="font-size:13px;font-weight:700">🎨 Paint</div><div style="font-size:11px;color:var(--muted)">$45/gallon</div></button>
+            <button onclick="quickMat('Drywall','sheet',18)" class="qmat"><div style="font-size:13px;font-weight:700">🧱 Drywall</div><div style="font-size:11px;color:var(--muted)">$18/sheet</div></button>
+          </div>
+        </div>
+      </div>
+      <div id="tool-ba" style="display:none">
+        <div class="card p16">
+          <div style="font-size:15px;font-weight:800;margin-bottom:14px">Before &amp; After</div>
+          <div class="frow" style="margin-bottom:14px">
+            <div><div class="flabel" style="color:var(--red)">BEFORE</div><label for="b-inp" style="display:block;aspect-ratio:1;border:2px dashed rgba(248,113,113,.3);border-radius:12px;cursor:pointer;overflow:hidden;position:relative"><div id="b-ph" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px"><div style="font-size:26px">📷</div><div style="font-size:11px;font-weight:600;color:rgba(248,113,113,.7)">Upload</div></div><img id="b-img" style="width:100%;height:100%;object-fit:cover;display:none"></label><input type="file" id="b-inp" accept="image/*" style="display:none" onchange="loadBA('b',this)"></div>
+            <div><div class="flabel" style="color:var(--green)">AFTER</div><label for="a-inp" style="display:block;aspect-ratio:1;border:2px dashed rgba(74,222,128,.3);border-radius:12px;cursor:pointer;overflow:hidden;position:relative"><div id="a-ph" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px"><div style="font-size:26px">✨</div><div style="font-size:11px;font-weight:600;color:rgba(74,222,128,.7)">Upload</div></div><img id="a-img" style="width:100%;height:100%;object-fit:cover;display:none"></label><input type="file" id="a-inp" accept="image/*" style="display:none" onchange="loadBA('a',this)"></div>
+          </div>
+          <div id="ba-slider" style="display:none">
+            <div id="compare-wrap">
+              <img id="sl-after" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+              <div id="sl-bwrap" style="position:absolute;inset:0;overflow:hidden;width:50%"><img id="sl-before" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;min-width:200px"></div>
+              <div id="sl-div" style="position:absolute;top:0;bottom:0;left:50%;width:3px;background:white;transform:translateX(-50%);cursor:ew-resize"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:32px;height:32px;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;font-size:12px">⇔</div></div>
+              <div style="position:absolute;top:8px;left:8px;background:rgba(248,113,113,.88);color:white;font-size:9px;font-weight:800;padding:2px 9px;border-radius:20px">BEFORE</div>
+              <div style="position:absolute;top:8px;right:8px;background:rgba(74,222,128,.88);color:#000;font-size:9px;font-weight:800;padding:2px 9px;border-radius:20px">AFTER</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM -->
+    <div id="pg-premium" class="page">
+      <div class="prem-hero">
+        <div class="badge">👑 PREMIUM</div>
+        <div style="font-size:22px;font-weight:900;letter-spacing:-.5px;margin-bottom:8px">Upgrade Your<br>Renovation Game</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:18px">Unlimited projects, AI design, PDF exports.</div>
+        <div class="plan-grid">
+          <div class="plan-card" id="p-monthly" onclick="selPlan('monthly')"><div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:7px">Monthly</div><div style="font-size:26px;font-weight:900;letter-spacing:-1px">$4.99</div><div style="font-size:11px;color:var(--muted)">per month</div></div>
+          <div class="plan-card on" id="p-yearly" onclick="selPlan('yearly')" style="position:relative"><div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--amber);color:#000;font-size:9px;font-weight:800;letter-spacing:1px;padding:3px 10px;border-radius:20px;white-space:nowrap">BEST VALUE</div><div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:7px">Yearly</div><div style="font-size:26px;font-weight:900;letter-spacing:-1px;color:var(--green)">$2.99</div><div style="font-size:11px;color:var(--muted)">per month</div></div>
+        </div>
+        <button onclick="openModal('pay-modal')" class="btn btn-g" style="font-size:15px;padding:15px;margin-bottom:10px">👑 Start Premium — Free 7-Day Trial</button>
+        <div style="text-align:center;font-size:11px;color:var(--muted)">Cancel anytime · No hidden fees</div>
+      </div>
+      <div class="stitle">What you get</div>
+      <div class="card" style="overflow:hidden;margin-bottom:14px">
+        <div class="feat-row"><div class="feat-icon" style="background:rgba(74,222,128,.1);border:1px solid var(--border2)">🏗️</div><div><div style="font-size:14px;font-weight:600;margin-bottom:2px">Unlimited Projects</div><div style="font-size:11px;color:var(--muted)">Free plan limited to 3</div></div><div style="color:var(--green);font-size:18px;font-weight:800;margin-left:auto">✓</div></div>
+        <div class="feat-row"><div class="feat-icon" style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2)">✨</div><div><div style="font-size:14px;font-weight:600;margin-bottom:2px">AI Design Studio</div><div style="font-size:11px;color:var(--muted)">Unlimited AI plans</div></div><div style="color:var(--green);font-size:18px;font-weight:800;margin-left:auto">✓</div></div>
+        <div class="feat-row"><div class="feat-icon" style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2)">📄</div><div><div style="font-size:14px;font-weight:600;margin-bottom:2px">PDF Export</div><div style="font-size:11px;color:var(--muted)">Download project reports</div></div><div style="color:var(--green);font-size:18px;font-weight:800;margin-left:auto">✓</div></div>
+      </div>
+      <div id="prem-status" style="display:none" class="card p16"><div style="text-align:center"><div style="font-size:36px;margin-bottom:8px">👑</div><div style="font-size:16px;font-weight:800;color:var(--green);margin-bottom:4px">You are on Premium!</div><button onclick="openModal('cancel-modal')" class="btn btn-r" style="margin-top:14px;padding:8px 18px;width:auto;font-size:12px">Cancel Subscription</button></div></div>
+    </div>
+
+    <!-- ACCOUNT -->
+    <div id="pg-account" class="page">
+      <div style="text-align:center;padding:20px 0 10px">
+        <div id="acc-avatar" style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--green3),var(--green));display:flex;align-items:center;justify-content:center;font-size:36px;margin:0 auto 12px;box-shadow:0 0 24px rgba(74,222,128,.35)">S</div>
+        <div id="acc-name-display" style="font-size:20px;font-weight:800">Space X</div>
+        <div id="acc-email-display" style="font-size:13px;color:var(--muted);margin-top:3px"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d4a7a4b5b7b1ac94b1acb5b9a4b8b1fab7bbb9">[email&#160;protected]</a></div>
+        <div id="acc-badge" style="display:inline-flex;align-items:center;gap:5px;background:var(--gdim);border:1px solid var(--border2);color:var(--green);padding:4px 14px;border-radius:20px;font-size:11px;font-weight:700;margin-top:10px">🆓 Free Plan</div>
+      </div>
+      <div class="stitle" style="margin-top:18px">Profile</div>
+      <div class="card" style="overflow:hidden;margin-bottom:14px">
+        <div class="acc-row" onclick="editField('name')"><div class="acc-row-icon">👤</div><div class="acc-row-body"><div class="acc-row-label">Name</div><div class="acc-row-val" id="acc-name-val">Space X</div></div><div class="acc-row-arrow">›</div></div>
+        <div class="acc-row" onclick="editField('email')"><div class="acc-row-icon">📧</div><div class="acc-row-body"><div class="acc-row-label">Email</div><div class="acc-row-val" id="acc-email-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7506051416100d35100d14180519105b161a18">[email&#160;protected]</a></div></div><div class="acc-row-arrow">›</div></div>
+        <div class="acc-row" onclick="editField('phone')"><div class="acc-row-icon">📱</div><div class="acc-row-body"><div class="acc-row-label">Phone</div><div class="acc-row-val" id="acc-phone-val">Not set</div></div><div class="acc-row-arrow">›</div></div>
+        <div class="acc-row" onclick="editField('location')"><div class="acc-row-icon">📍</div><div class="acc-row-body"><div class="acc-row-label">Location</div><div class="acc-row-val" id="acc-location-val">Not set</div></div><div class="acc-row-arrow">›</div></div>
+      </div>
+      <div class="stitle">Subscription</div>
+      <div class="card" style="overflow:hidden;margin-bottom:14px">
+        <div class="acc-row" onclick="showPage('premium')"><div class="acc-row-icon">👑</div><div class="acc-row-body"><div class="acc-row-label">Plan</div><div class="acc-row-val" id="acc-plan-val">Free Plan</div></div><div style="background:var(--gdim);border:1px solid var(--border2);color:var(--green);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px">Upgrade →</div></div>
+        <div class="acc-row"><div class="acc-row-icon">📊</div><div class="acc-row-body"><div class="acc-row-label">Projects Used</div><div class="acc-row-val" id="acc-proj-count">0 / 3</div></div></div>
+        <div class="acc-row"><div class="acc-row-icon">💰</div><div class="acc-row-body"><div class="acc-row-label">Total Budget Tracked</div><div class="acc-row-val" id="acc-total-budget">$0</div></div></div>
+      </div>
+      <div class="stitle">Preferences</div>
+      <div class="card" style="overflow:hidden;margin-bottom:14px">
+        <div class="acc-row" onclick="toggleNotif()"><div class="acc-row-icon">🔔</div><div class="acc-row-body"><div class="acc-row-label">Notifications</div><div class="acc-row-val">Task reminders</div></div><div id="notif-tog" class="toggle off"></div></div>
+        <div class="acc-row" onclick="changeCurrency()"><div class="acc-row-icon">💱</div><div class="acc-row-body"><div class="acc-row-label">Currency</div><div class="acc-row-val" id="currency-val">USD ($)</div></div><div class="acc-row-arrow">›</div></div>
+        <div class="acc-row" onclick="openLangModal()"><div class="acc-row-icon">🌐</div><div class="acc-row-body"><div class="acc-row-label">Language</div><div class="acc-row-val" id="lang-val">English</div></div><div class="acc-row-arrow">›</div></div>
+      </div>
+      <div class="stitle">Data</div>
+      <div class="card" style="overflow:hidden;margin-bottom:14px">
+        <div class="acc-row" onclick="exportData()"><div class="acc-row-icon">📤</div><div class="acc-row-body"><div class="acc-row-label">Export Data</div><div class="acc-row-val">Download all your data</div></div><div class="acc-row-arrow">›</div></div>
+        <div class="acc-row" onclick="confirmClearData()"><div class="acc-row-icon">🗑️</div><div class="acc-row-body"><div class="acc-row-label" style="color:var(--red)">Clear All Data</div><div class="acc-row-val">Reset everything</div></div><div class="acc-row-arrow" style="color:var(--red)">›</div></div>
+      </div>
+      <button onclick="signOutUser()" class="btn btn-r" style="margin-bottom:14px;padding:12px">🚪 Sign Out</button>
+      <div style="text-align:center;padding:10px 0 20px;font-size:11px;color:var(--muted2)">ReinoviX v3.0 · Made with 💚</div>
+    </div>
+
+    <!-- DETAIL -->
+    <div id="pg-detail" class="page">
+      <!-- Header -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+        <button onclick="goBack()" style="width:36px;height:36px;border-radius:10px;background:var(--gdim);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;flex-shrink:0">←</button>
+        <div style="flex:1;min-width:0"><div style="font-size:17px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="d-title"></div><div style="font-size:12px;color:var(--muted)" id="d-meta"></div></div>
+        <button onclick="deleteProj()" class="btn btn-r" style="width:auto;padding:7px 13px;font-size:12px">🗑</button>
+      </div>
+
+      <!-- Progress Card -->
+      <div class="card p14" style="margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:8px">
+          <span>Progress</span><span id="d-pct" style="color:var(--green);font-weight:900">0%</span>
+        </div>
+        <div class="prog" style="height:10px;border-radius:8px"><div class="pf" id="d-bar" style="width:0%;border-radius:8px"></div></div>
+      </div>
+
+      <!-- Budget Card -->
+      <div class="card p14" style="margin-bottom:12px" id="d-budget-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+          <div><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px">Budget</div><div style="font-size:20px;font-weight:900;color:var(--text)" id="d-spent-amt">$0</div></div>
+          <div style="text-align:right"><div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px">Remaining</div><div style="font-size:20px;font-weight:900;color:var(--green)" id="d-remain-amt">$0</div></div>
+        </div>
+        <div style="position:relative;height:8px;background:var(--border2);border-radius:8px;overflow:hidden">
+          <div id="d-budget-bar" style="height:100%;background:linear-gradient(90deg,var(--green),#4ade80);border-radius:8px;width:0%;transition:width 0.6s ease"></div>
+          <div id="d-budget-total-label" style="position:absolute;right:0;bottom:-16px;font-size:10px;color:var(--muted)"></div>
+        </div>
+        <div style="height:16px"></div>
+      </div>
+
+      <!-- Checklist + Timeline side by side -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+        <!-- Checklist -->
+        <div class="card p14">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <span style="font-size:13px;font-weight:800">Checklist</span>
+            <span onclick="dTab('tasks',document.querySelector('.dtab'))" style="font-size:11px;color:var(--green);cursor:pointer;font-weight:600">View All</span>
+          </div>
+          <div id="d-checklist-preview"></div>
+          <div onclick="dTab('tasks',document.querySelector('.dtab'))" style="text-align:center;font-size:11px;color:var(--green);cursor:pointer;font-weight:600;margin-top:8px">View All</div>
+        </div>
+        <!-- Timeline -->
+        <div class="card p14">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <span style="font-size:13px;font-weight:800">Timeline</span>
+            <span onclick="dTab('expenses',document.querySelectorAll('.dtab')[1])" style="font-size:11px;color:var(--green);cursor:pointer;font-weight:600">View All</span>
+          </div>
+          <div id="d-timeline-preview"></div>
+          <div onclick="dTab('expenses',document.querySelectorAll('.dtab')[1])" style="text-align:center;font-size:11px;color:var(--green);cursor:pointer;font-weight:600;margin-top:8px">View All</div>
+        </div>
+      </div>
+
+      <!-- Project Photos -->
+      <div class="card p14" style="margin-bottom:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <span style="font-size:13px;font-weight:800">Project Photos</span>
+          <button onclick="document.getElementById('d-photo-upload').click()" style="background:var(--gdim);border:1px solid var(--border2);border-radius:8px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px">📷</button>
+          <input type="file" id="d-photo-upload" accept="image/*" multiple style="display:none" onchange="addDetailPhotos(event)">
+        </div>
+        <div id="d-photos-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px"></div>
+        <div id="d-photos-empty" style="text-align:center;color:var(--muted);padding:20px 0;font-size:12px">Tap 📷 to add photos</div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="dtabs">
+        <button class="dtab on" onclick="dTab('tasks',this)">✅ Tasks</button>
+        <button class="dtab" onclick="dTab('expenses',this)">💰 Expenses</button>
+        <button class="dtab" onclick="dTab('notes',this)">📝 Notes</button>
+      </div>
+      <div id="d-tasks-panel"><div id="d-task-list"></div><div style="display:flex;gap:10px;margin-top:12px"><input class="finput" id="new-task" placeholder="Add a task..." style="flex:1" onkeydown="if(event.key==='Enter')addTask()"><button onclick="addTask()" class="btn btn-g" style="width:auto;padding:0 16px">+ Add</button></div></div>
+      <div id="d-expenses-panel" style="display:none"><div class="card" style="overflow:hidden" id="d-exp-list"></div><button onclick="openExpForDetail()" class="btn btn-g" style="margin-top:12px">+ Add Expense</button></div>
+      <div id="d-notes-panel" style="display:none"><textarea class="ftarea" id="d-notes" rows="8" placeholder="Notes, measurements, ideas..." oninput="saveNotes()" style="width:100%"></textarea></div>
+    </div>
+
+  </div><!-- end scrl -->
+
+  <nav class="bnav">
+    <button class="nbtn on" data-p="projects" onclick="navTo('projects',this)"><div class="npill">🏠</div><div class="nlbl" id="nav-projects" data-i18n="projects">Projects</div></button>
+    <button class="nbtn" data-p="budget" onclick="navTo('budget',this)"><div class="npill">💰</div><div class="nlbl" id="nav-budget" data-i18n="budget">Budget</div></button>
+    <button class="nbtn" data-p="ai" onclick="navTo('ai',this)"><div class="npill">✨</div><div class="nlbl" id="nav-ai" data-i18n="ai">AI Design</div></button>
+    <button class="nbtn" data-p="checklist" onclick="navTo('checklist',this)"><div class="npill">✅</div><div class="nlbl" id="nav-checklist" data-i18n="checklist">Checklist</div></button>
+    <button class="nbtn" onclick="openModal('more-modal')"><div class="npill" style="font-size:13px">•••</div><div class="nlbl" id="nav-more" data-i18n="more">More</div></button>
+  </nav>
+  <button class="fab" id="fab" onclick="fabClick()">+</button>
+</div>
+
+<!-- MODALS -->
+<div class="overlay" id="more-modal" onclick="if(event.target===this)closeModal('more-modal')"><div class="modal">
+  <div class="mhandle"></div><div class="mtitle">More</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <button onclick="closeModal('more-modal');showPage('inspire')" style="display:flex;align-items:center;gap:10px;padding:15px;background:var(--gdim);border:1px solid var(--border2);border-radius:13px;cursor:pointer;font-family:Inter,sans-serif;color:var(--text);font-size:13px;font-weight:700"><span style="font-size:20px">💡</span>Inspire</button>
+    <button onclick="closeModal('more-modal');showPage('tools')" style="display:flex;align-items:center;gap:10px;padding:15px;background:var(--gdim);border:1px solid var(--border2);border-radius:13px;cursor:pointer;font-family:Inter,sans-serif;color:var(--text);font-size:13px;font-weight:700"><span style="font-size:20px">🔧</span>Tools</button>
+    <button onclick="closeModal('more-modal');showPage('premium')" style="display:flex;align-items:center;gap:10px;padding:15px;background:var(--gdim);border:1px solid var(--border2);border-radius:13px;cursor:pointer;font-family:Inter,sans-serif;color:var(--text);font-size:13px;font-weight:700"><span style="font-size:20px">👑</span>Premium</button>
+    <button onclick="closeModal('more-modal');goAccount()" style="display:flex;align-items:center;gap:10px;padding:15px;background:var(--gdim);border:1px solid var(--border2);border-radius:13px;cursor:pointer;font-family:Inter,sans-serif;color:var(--text);font-size:13px;font-weight:700"><span style="font-size:20px">⚙️</span>Account</button>
+  </div>
+</div></div>
+
+<div class="overlay" id="new-proj-modal" onclick="if(event.target===this)closeModal('new-proj-modal')"><div class="modal">
+  <div class="mhandle"></div><div class="mtitle" id="np-modal-title">New Project</div>
+  <div class="fgroup"><label class="flabel" id="np-name-lbl" data-i18n="projectName">Project Name</label><input class="finput" id="np-name" placeholder="e.g. Kitchen Remodel"></div>
+  <div class="fgroup"><label class="flabel" id="np-room-lbl" data-i18n="roomType">Room Type</label><select class="fsel" id="np-room"><option>Kitchen</option><option>Bathroom</option><option>Living Room</option><option>Bedroom</option><option>Home Office</option><option>Dining Room</option><option>Outdoor</option></select></div>
+  <div class="fgroup"><label class="flabel" id="np-budget-lbl" data-i18n="budget">Budget</label><input class="finput" id="np-budget" type="number" placeholder="25000"></div>
+  <div class="fgroup"><label class="flabel" id="np-desc-lbl" data-i18n="description">Description</label><textarea class="ftarea" id="np-desc" rows="2" placeholder="Brief description..."></textarea></div>
+  <div class="mfooter"><button onclick="closeModal('new-proj-modal')" class="btn btn-gh" id="np-cancel-btn">Cancel</button><button onclick="addProject()" class="btn btn-g" id="np-submit-btn">Create Project</button></div>
+</div></div>
+
+<div class="overlay" id="exp-modal" onclick="if(event.target===this)closeModal('exp-modal')"><div class="modal">
+  <div class="mhandle"></div><div class="mtitle" id="exp-modal-title">Add Expense</div>
+  <div class="fgroup"><label class="flabel" id="ex-desc-lbl">Description</label><input class="finput" id="ex-desc" placeholder="e.g. Hardwood flooring"></div>
+  <div class="fgroup"><label class="flabel" id="ex-cat-lbl">Category</label><select class="fsel" id="ex-cat"><option>Materials</option><option>Labor</option><option>Permits</option><option>Fixtures</option><option>Appliances</option><option>Tools</option><option>Other</option></select></div>
+  <div class="fgroup"><label class="flabel" id="ex-proj-lbl">Project</label><select class="fsel" id="ex-proj"></select></div>
+  <div class="fgroup"><label class="flabel" id="ex-amt-lbl">Amount</label><input class="finput" id="ex-amt" type="number" placeholder="1500"></div>
+  <div class="mfooter"><button onclick="closeModal('exp-modal')" class="btn btn-gh" id="exp-cancel-btn">Cancel</button><button onclick="addExpense()" class="btn btn-g" id="exp-submit-btn">Add Expense</button></div>
+</div></div>
+
+<div class="overlay" id="inspo-modal" onclick="if(event.target===this)closeModal('inspo-modal')"><div class="modal">
+  <div class="mhandle"></div>
+  <div class="mtitle" id="inspo-title"></div>
+  <p id="inspo-desc" style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:22px"></p>
+  <button class="btn btn-g" id="inspo-ai-btn">✦ Design This with AI</button>
+  <button onclick="closeModal('inspo-modal')" class="btn btn-gh" style="margin-top:10px">Close</button>
+</div></div>
+
+<div class="overlay" id="share-modal" onclick="if(event.target===this)closeModal('share-modal')"><div class="modal">
+  <div class="mhandle"></div><div class="mtitle">Share ReinoviX</div>
+  <div class="url-box"><div class="url-txt" id="share-url"></div><button onclick="copyLink()" class="copy-btn">Copy</button></div>
+  <div class="share-grid">
+    <button onclick="shareVia('whatsapp')" class="sbtn"><span style="font-size:20px">💬</span>WhatsApp</button>
+    <button onclick="shareVia('sms')" class="sbtn"><span style="font-size:20px">💌</span>SMS</button>
+    <button onclick="shareVia('email')" class="sbtn"><span style="font-size:20px">📧</span>Email</button>
+    <button onclick="shareVia('native')" class="sbtn"><span style="font-size:20px">⋯</span>More</button>
+  </div>
+  <button onclick="closeModal('share-modal')" class="btn btn-gh">Close</button>
+</div></div>
+
+<div class="overlay" id="pay-modal" onclick="if(event.target===this)closeModal('pay-modal')"><div class="modal">
+  <div class="mhandle"></div>
+  <div style="text-align:center;margin-bottom:16px"><div style="font-size:34px;margin-bottom:8px">👑</div><div class="mtitle" style="margin:0">Start Premium</div><div style="font-size:13px;color:var(--muted)">7-day free trial · Cancel anytime</div></div>
+  <div class="fgroup"><label class="flabel">Cardholder Name</label><input class="finput" id="pay-name" placeholder="John Smith"></div>
+  <div class="fgroup"><label class="flabel">Card Number</label><input class="finput" id="pay-card" placeholder="1234 5678 9012 3456" maxlength="19" oninput="fmtCard(this)"></div>
+  <div class="frow" style="margin-bottom:16px">
+    <div class="fgroup" style="margin:0"><label class="flabel">Expiry</label><input class="finput" id="pay-exp" placeholder="MM/YY" maxlength="5" oninput="fmtExp(this)"></div>
+    <div class="fgroup" style="margin:0"><label class="flabel">CVV</label><input class="finput" id="pay-cvv" placeholder="123" maxlength="3" type="password"></div>
+  </div>
+  <button onclick="processPay()" class="btn btn-g" id="pay-btn" style="font-size:15px;padding:14px;margin-bottom:10px">Start Free Trial →</button>
+  <button onclick="closeModal('pay-modal')" class="btn btn-gh">Maybe Later</button>
+</div></div>
+
+<div class="overlay" id="ok-modal"><div class="modal" style="text-align:center">
+  <div class="mhandle"></div>
+  <div style="font-size:58px;margin:10px 0 12px">🎉</div>
+  <div style="font-size:22px;font-weight:900;color:var(--green);margin-bottom:8px">Welcome to Premium!</div>
+  <div style="font-size:14px;color:var(--muted);margin-bottom:22px">All features unlocked.</div>
+  <button onclick="closeModal('ok-modal');showPage('projects')" class="btn btn-g" style="margin-bottom:10px">🏗️ View Projects</button>
+  <button onclick="closeModal('ok-modal');showPage('ai')" class="btn btn-gh">✨ Try AI Design</button>
+</div></div>
+
+<div class="overlay" id="cancel-modal" onclick="if(event.target===this)closeModal('cancel-modal')"><div class="modal">
+  <div class="mhandle"></div>
+  <div style="text-align:center;margin-bottom:16px"><div style="font-size:36px;margin-bottom:8px">😢</div><div class="mtitle" style="margin-bottom:4px">Cancel Premium?</div></div>
+  <div class="mfooter"><button onclick="doCancelPrem()" class="btn btn-r">Cancel Plan</button><button onclick="closeModal('cancel-modal')" class="btn btn-g">Keep Premium 👑</button></div>
+</div></div>
+
+<div class="overlay" id="edit-modal" onclick="if(event.target===this)closeModal('edit-modal')"><div class="modal">
+  <div class="mhandle"></div>
+  <div class="mtitle" id="edit-title">Edit</div>
+  <div class="fgroup"><label class="flabel" id="edit-label">Value</label><input class="finput" id="edit-input" onkeydown="if(event.key==='Enter')saveEditField()"></div>
+  <div class="mfooter"><button onclick="closeModal('edit-modal')" class="btn btn-gh">Cancel</button><button onclick="saveEditField()" class="btn btn-g">Save</button></div>
+</div></div>
+
+<div class="overlay" id="currency-modal" onclick="if(event.target===this)closeModal('currency-modal')"><div class="modal">
+  <div class="mhandle"></div><div class="mtitle">Select Currency</div>
+  <button onclick="setCurrency('USD','$')" class="curr-btn">🇺🇸 USD — US Dollar ($)</button>
+  <button onclick="setCurrency('EUR','€')" class="curr-btn">🇪🇺 EUR — Euro (€)</button>
+  <button onclick="setCurrency('GBP','£')" class="curr-btn">🇬🇧 GBP — British Pound (£)</button>
+  <button onclick="setCurrency('CAD','C$')" class="curr-btn">🇨🇦 CAD — Canadian Dollar (C$)</button>
+  <button onclick="setCurrency('AUD','A$')" class="curr-btn">🇦🇺 AUD — Australian Dollar (A$)</button>
+  <button onclick="setCurrency('INR','₹')" class="curr-btn">🇮🇳 INR — Indian Rupee (₹)</button>
+  <button onclick="setCurrency('AED','د.إ')" class="curr-btn">🇦🇪 AED — UAE Dirham</button>
+  <button onclick="closeModal('currency-modal')" class="btn btn-gh" style="margin-top:8px">Cancel</button>
+</div></div>
+
+<div class="overlay" id="lang-modal" onclick="if(event.target===this)closeModal('lang-modal')"><div class="modal">
+  <div class="mhandle"></div><div class="mtitle">🌐 Language</div>
+  <input class="finput" id="lang-search" placeholder="Search..." oninput="renderLangList(this.value)" style="margin-bottom:12px">
+  <div id="lang-list" style="max-height:55vh;overflow-y:auto"></div>
+  <button onclick="closeModal('lang-modal')" class="btn btn-gh" style="margin-top:12px">Cancel</button>
+</div></div>
+
+<div id="toast"></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
+// ============================================================
+// AUTH FUNCTIONS
+// ============================================================
+var authMode = 'login';
+
+function authTab(mode) {
+  authMode = mode;
+  var isSignup = mode === 'signup';
+  document.getElementById('login-tab').style.background = isSignup ? 'transparent' : 'var(--green)';
+  document.getElementById('login-tab').style.color = isSignup ? 'var(--muted)' : '#000';
+  document.getElementById('signup-tab').style.background = isSignup ? 'var(--green)' : 'transparent';
+  document.getElementById('signup-tab').style.color = isSignup ? '#000' : 'var(--muted)';
+  document.getElementById('signup-name-group').style.display = isSignup ? 'block' : 'none';
+  document.getElementById('forgot-wrap').style.display = isSignup ? 'none' : 'block';
+  document.getElementById('auth-submit-btn').textContent = isSignup ? 'Create Account' : 'Sign In';
+  document.getElementById('auth-error').style.display = 'none';
+}
+
+function showAuthError(msg) {
+  var el = document.getElementById('auth-error');
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+
+function authSubmit() {
+  var email = document.getElementById('auth-email').value.trim();
+  var password = document.getElementById('auth-password').value;
+  var btn = document.getElementById('auth-submit-btn');
+  document.getElementById('auth-error').style.display = 'none';
+
+  if (!email || !password) { showAuthError('Please fill in all fields'); return; }
+  if (password.length < 6) { showAuthError('Password must be at least 6 characters'); return; }
+
+  btn.textContent = 'Please wait...';
+  btn.disabled = true;
+
+  var fns = window.fbFns;
+  var auth = window.fbAuth;
+  // If Firebase not ready yet, wait up to 5 seconds
+  if (!fns || !auth) {
+    btn.textContent = 'Connecting...';
+    var waited = 0;
+    var waitInterval = setInterval(function() {
+      waited += 200;
+      if (window.fbFns && window.fbAuth) {
+        clearInterval(waitInterval);
+        btn.textContent = authMode === 'signup' ? 'Create Account' : 'Sign In';
+        btn.disabled = false;
+        authSubmit();
+      } else if (waited >= 5000) {
+        clearInterval(waitInterval);
+        btn.textContent = authMode === 'signup' ? 'Create Account' : 'Sign In';
+        btn.disabled = false;
+        showAuthError('Connection failed. Check your internet and try again.');
+      }
+    }, 200);
+    return;
+  }
+
+  if (authMode === 'signup') {
+    var name = document.getElementById('auth-name').value.trim() || 'User';
+    fns.createUserWithEmailAndPassword(auth, email, password)
+      .then(function(cred) {
+        return saveUserToFirestore(cred.user, name);
+      })
+      .catch(function(err) {
+        btn.textContent = 'Create Account';
+        btn.disabled = false;
+        showAuthError(friendlyError(err.code));
+      });
+  } else {
+    fns.signInWithEmailAndPassword(auth, email, password)
+      .catch(function(err) {
+        btn.textContent = 'Sign In';
+        btn.disabled = false;
+        showAuthError(friendlyError(err.code));
+      });
+  }
+}
+
+function signInGoogle() {
+  if (!window.fbFns || !window.fbAuth || !window.fbGoogleProvider) {
+    showAuthError('Connecting to Google... please try again in 2 seconds.');
+    setTimeout(function(){ document.getElementById('auth-error').style.display='none'; }, 2000);
+    return;
+  }
+  var fns = window.fbFns;
+  // Use redirect on mobile (more reliable), popup on desktop
+  var isMobile = /Android|iPhone|iPad/i.test(navigator.userAgent);
+  if (isMobile) {
+    fns.signInWithRedirect(window.fbAuth, window.fbGoogleProvider)
+      .catch(function(err) {
+        showAuthError(friendlyError(err.code));
+      });
+  } else {
+    fns.signInWithPopup(window.fbAuth, window.fbGoogleProvider)
+      .then(function(result) {
+        return saveUserToFirestore(result.user, result.user.displayName || 'User');
+      })
+      .catch(function(err) {
+        showAuthError(friendlyError(err.code));
+      });
+  }
+}
+
+function forgotPassword() {
+  var email = document.getElementById('auth-email').value.trim();
+  if (!email) { showAuthError('Enter your email address first'); return; }
+  if (!window.fbFns) { showAuthError('Still loading, please try again.'); return; }
+  window.fbFns.sendPasswordResetEmail(window.fbAuth, email)
+    .then(function() { showAuthError('Reset email sent! Check your inbox.'); document.getElementById('auth-error').style.color = 'var(--green)'; })
+    .catch(function(err) { showAuthError(friendlyError(err.code)); });
+}
+
+function saveUserToFirestore(user, name) {
+  if (window.fbSaveNewUser) window.fbSaveNewUser(user, name);
+}
+window.fbLoadAndShow = function(uid) {
+  var fns = window.fbFns;
+  var db = window.fbDb;
+  if (!fns || !db) {
+    // Firebase not ready yet, wait briefly
+    setTimeout(function() { window.fbLoadAndShow(uid); }, 100);
+    return;
+  }
+  var userRef = fns.doc(db, 'users', uid);
+  fns.getDoc(userRef).then(function(snap) {
+    if (snap.exists()) {
+      try {
+        var data = snap.data();
+        var loaded = JSON.parse(data.state);
+        if (loaded && loaded.projects) {
+          S = loaded;
+          if (!S.account) S.account = defaultState().account;
+          if (!S.checklist || !S.checklist.length) S.checklist = defaultState().checklist;
+        } else { S = defaultState(); }
+      } catch(e) { S = defaultState(); }
+    } else {
+      S = defaultState();
+      // Save new user
+      window.fbSaveNewUser(window.currentUser, window.currentUser.displayName || 'User');
+    }
+    window.fbShowApp();
+  }).catch(function() {
+    S = defaultState();
+    window.fbShowApp();
+  });
+};
+
+window.fbSaveNewUser = function(user, name) {
+  var fns = window.fbFns;
+  var db = window.fbDb;
+  if (!fns || !db) return;
+  var userRef = fns.doc(db, 'users', user.uid);
+  fns.getDoc(userRef).then(function(snap) {
+    if (!snap.exists()) {
+      var ns = defaultState();
+      ns.account.name = name;
+      ns.account.email = user.email || '';
+      fns.setDoc(userRef, { state: JSON.stringify(ns) });
+    }
+  }).catch(function(){});
+};
+
+window.fbShowApp = function() {
+  var loadEl = document.getElementById('loading-screen');
+  var authEl = document.getElementById('auth-screen');
+  var appEl = document.getElementById('app');
+  // Render everything first while still hidden
+  try {
+    applyLanguage();
+    renderProjects();
+    renderBudget();
+    renderChecklist();
+    updateAILock();
+  } catch(e) { console.error('Render error:', e); }
+  // Now show app and hide loading
+  authEl.style.display = 'none';
+  appEl.style.visibility = 'visible';
+  appEl.style.display = 'flex';
+  requestAnimationFrame(function() {
+    appEl.style.opacity = '1';
+    if (loadEl) {
+      loadEl.classList.add('hide');
+      setTimeout(function(){ loadEl.style.display='none'; }, 350);
+    }
+  });
+};
+
+// Keep old name for compatibility
+window.loadUserData = window.fbLoadAndShow;
+
+function friendlyError(code) {
+  var msgs = {
+    'auth/email-already-in-use': 'This email is already registered. Try signing in.',
+    'auth/invalid-email': 'Invalid email address.',
+    'auth/wrong-password': 'Incorrect password. Try again.',
+    'auth/user-not-found': 'No account found with this email.',
+    'auth/weak-password': 'Password is too weak. Use at least 6 characters.',
+    'auth/too-many-requests': 'Too many attempts. Please try again later.',
+    'auth/popup-closed-by-user': 'Google sign-in was cancelled.',
+    'auth/invalid-credential': 'Incorrect email or password.',
+  };
+  return msgs[code] || 'Something went wrong. Please try again.';
+}
+
+// Override save to also sync to Firestore
+var _origSave = save;
+window.save = function() {
+  _origSave();
+  if (window.currentUser && window.fbFns && window.fbDb) {
+    var fns = window.fbFns;
+    var userRef = fns.doc(window.fbDb, 'users', window.currentUser.uid);
+    fns.updateDoc(userRef, { state: JSON.stringify(S) }).catch(function(){});
+  }
+};
+save = window.save;
+
+// Add sign out to account page
+function signOutUser() {
+  if (confirm('Sign out of ReinoviX?')) {
+    window.fbFns.signOut(window.fbAuth).then(function() {
+      S = defaultState();
+    });
+  }
+}
+
+// ============================================================
+// TRANSLATIONS - defined FIRST before anything else
+// ============================================================
+var TR = {
+en:{morning:"Good morning",afternoon:"Good afternoon",evening:"Good evening",subtitle:"Your renovation command center",projects:"Projects",budget:"Budget",ai:"AI Design",checklist:"Checklist",more:"More",your_projects:"Your Projects",add_project:"New Project",in_progress:"In Progress",tasks_due:"Tasks Due",estimate:"Estimate",days_left:"Days Left",spent_of:"spent of",overall_progress:"Overall Progress",by_project:"By Project",spent:"SPENT",remaining:"REMAINING",total_budget:"TOTAL BUDGET",expenses:"Expenses",welcome:"Welcome back",createProject:"Create Project",addExpense:"Add Expense",projectName:"Project Name",roomType:"Room Type",description:"Description",deadline:"Deadline",close:"Close",settings:"Settings",yourName:"Your Name",budgetSummary:"Budget Summary",totalSpent:"Total Spent",newProject:"New Project",cancel:"Cancel",category:"Category",amount:"Amount",date:"Date",addExpenseBtn:"Add Expense",noProjects:"No projects yet",noExpenses:"No expenses yet",project:"Project"},
+ru:{morning:"Доброе утро",afternoon:"Добрый день",evening:"Добрый вечер",subtitle:"Ваш центр управления ремонтом",projects:"Проекты",budget:"Бюджет",ai:"ИИ Дизайн",checklist:"Чеклист",more:"Ещё",your_projects:"Ваши проекты",add_project:"Новый проект",in_progress:"В процессе",tasks_due:"Задач",estimate:"Оценка",days_left:"Дней осталось",spent_of:"потрачено из",overall_progress:"Общий прогресс",by_project:"По проектам",spent:"ПОТРАЧЕНО",remaining:"ОСТАЛОСЬ",total_budget:"ОБЩИЙ БЮДЖЕТ",expenses:"Расходы",welcome:"Добро пожаловать",createProject:"Создать проект",addExpense:"Добавить расход",projectName:"Название проекта",roomType:"Тип комнаты",description:"Описание",deadline:"Крайний срок",close:"Закрыть",settings:"Настройки",yourName:"Ваше имя",budgetSummary:"Сводка бюджета",totalSpent:"Всего потрачено",newProject:"Новый проект",cancel:"Отмена",category:"Категория",amount:"Сумма",date:"Дата",addExpenseBtn:"Добавить расход",noProjects:"Нет проектов",noExpenses:"Нет расходов",project:"Проект"},
+es:{morning:"Buenos días",afternoon:"Buenas tardes",evening:"Buenas noches",subtitle:"Tu centro de renovación",projects:"Proyectos",budget:"Presupuesto",ai:"Diseño IA",checklist:"Lista",more:"Más",your_projects:"Tus Proyectos",add_project:"Nuevo Proyecto",in_progress:"En Progreso",tasks_due:"Tareas",estimate:"Estimado",days_left:"Días Restantes",spent_of:"gastado de",overall_progress:"Progreso General",by_project:"Por Proyecto",spent:"GASTADO",remaining:"RESTANTE",total_budget:"PRESUPUESTO TOTAL",expenses:"Gastos",welcome:"Bienvenido",createProject:"Crear Proyecto",addExpense:"Agregar Gasto",projectName:"Nombre del Proyecto",roomType:"Tipo de Habitación",description:"Descripción",deadline:"Fecha Límite",close:"Cerrar",settings:"Configuración",yourName:"Tu Nombre",budgetSummary:"Resumen de Presupuesto",totalSpent:"Total Gastado",newProject:"Nuevo Proyecto",cancel:"Cancelar",category:"Categoría",amount:"Cantidad",date:"Fecha",addExpenseBtn:"Agregar Gasto",noProjects:"Sin proyectos",noExpenses:"Sin gastos",project:"Proyecto"},
+fr:{morning:"Bonjour",afternoon:"Bon après-midi",evening:"Bonsoir",subtitle:"Votre centre de rénovation",projects:"Projets",budget:"Budget",ai:"Design IA",checklist:"Liste",more:"Plus",your_projects:"Vos Projets",add_project:"Nouveau Projet",in_progress:"En Cours",tasks_due:"Tâches",estimate:"Estimé",days_left:"Jours Restants",spent_of:"dépensé de",overall_progress:"Progression",by_project:"Par Projet",spent:"DÉPENSÉ",remaining:"RESTANT",total_budget:"BUDGET TOTAL",expenses:"Dépenses",welcome:"Bienvenue",createProject:"Créer un Projet",addExpense:"Ajouter une Dépense",projectName:"Nom du Projet",roomType:"Type de Pièce",description:"Description",deadline:"Date Limite",close:"Fermer",settings:"Paramètres",yourName:"Votre Nom",budgetSummary:"Résumé du Budget",totalSpent:"Total Dépensé",newProject:"Nouveau Projet",cancel:"Annuler",category:"Catégorie",amount:"Montant",date:"Date",addExpenseBtn:"Ajouter Dépense",noProjects:"Aucun projet",noExpenses:"Aucune dépense",project:"Projet"},
+de:{morning:"Guten Morgen",afternoon:"Guten Nachmittag",evening:"Guten Abend",subtitle:"Ihr Renovierungszentrum",projects:"Projekte",budget:"Budget",ai:"KI-Design",checklist:"Checkliste",more:"Mehr",your_projects:"Ihre Projekte",add_project:"Neues Projekt",in_progress:"In Bearbeitung",tasks_due:"Aufgaben",estimate:"Schätzung",days_left:"Tage übrig",spent_of:"ausgegeben von",overall_progress:"Gesamtfortschritt",by_project:"Nach Projekt",spent:"AUSGEGEBEN",remaining:"VERBLEIBEND",total_budget:"GESAMTBUDGET",expenses:"Ausgaben",welcome:"Willkommen",createProject:"Projekt Erstellen",addExpense:"Ausgabe Hinzufügen",projectName:"Projektname",roomType:"Raumtyp",description:"Beschreibung",deadline:"Fälligkeitsdatum",close:"Schließen",settings:"Einstellungen",yourName:"Ihr Name",budgetSummary:"Budgetübersicht",totalSpent:"Gesamtausgaben",newProject:"Neues Projekt",cancel:"Abbrechen",category:"Kategorie",amount:"Betrag",date:"Datum",addExpenseBtn:"Ausgabe Hinzufügen",noProjects:"Keine Projekte",noExpenses:"Keine Ausgaben",project:"Projekt"},
+it:{morning:"Buongiorno",afternoon:"Buon pomeriggio",evening:"Buona sera",subtitle:"Il tuo centro di ristrutturazione",projects:"Progetti",budget:"Budget",ai:"Design IA",checklist:"Lista",more:"Altro",your_projects:"I tuoi Progetti",add_project:"Nuovo Progetto",in_progress:"In Corso",tasks_due:"Attività",estimate:"Stima",days_left:"Giorni rimasti",spent_of:"speso di",overall_progress:"Progresso",by_project:"Per Progetto",spent:"SPESO",remaining:"RIMANENTE",total_budget:"BUDGET TOTALE",expenses:"Spese",welcome:"Bentornato",createProject:"Crea Progetto",addExpense:"Aggiungi Spesa",projectName:"Nome Progetto",roomType:"Tipo di Stanza",description:"Descrizione",deadline:"Scadenza",close:"Chiudi",settings:"Impostazioni",yourName:"Il Tuo Nome",budgetSummary:"Riepilogo Budget",totalSpent:"Totale Speso",newProject:"Nuovo Progetto",cancel:"Annulla",category:"Categoria",amount:"Importo",date:"Data",addExpenseBtn:"Aggiungi Spesa",noProjects:"Nessun progetto",noExpenses:"Nessuna spesa",project:"Progetto"},
+pt:{morning:"Bom dia",afternoon:"Boa tarde",evening:"Boa noite",subtitle:"Seu centro de renovação",projects:"Projetos",budget:"Orçamento",ai:"Design IA",checklist:"Lista",more:"Mais",your_projects:"Seus Projetos",add_project:"Novo Projeto",in_progress:"Em Andamento",tasks_due:"Tarefas",estimate:"Estimativa",days_left:"Dias Restantes",spent_of:"gasto de",overall_progress:"Progresso Geral",by_project:"Por Projeto",spent:"GASTO",remaining:"RESTANTE",total_budget:"ORÇAMENTO TOTAL",expenses:"Gastos",welcome:"Bem-vindo",createProject:"Criar Projeto",addExpense:"Adicionar Despesa",projectName:"Nome do Projeto",roomType:"Tipo de Sala",description:"Descrição",deadline:"Prazo",close:"Fechar",settings:"Configurações",yourName:"Seu Nome",budgetSummary:"Resumo do Orçamento",totalSpent:"Total Gasto",newProject:"Novo Projeto",cancel:"Cancelar",category:"Categoria",amount:"Valor",date:"Data",addExpenseBtn:"Adicionar Despesa",noProjects:"Sem projetos",noExpenses:"Sem despesas",project:"Projeto"},
+ar:{morning:"صباح الخير",afternoon:"مساء الخير",evening:"مساء النور",subtitle:"مركز التجديد الخاص بك",projects:"المشاريع",budget:"الميزانية",ai:"تصميم AI",checklist:"قائمة",more:"المزيد",your_projects:"مشاريعك",add_project:"مشروع جديد",in_progress:"قيد التنفيذ",tasks_due:"المهام",estimate:"التقدير",days_left:"أيام متبقية",spent_of:"أنفق من",overall_progress:"التقدم الكلي",by_project:"حسب المشروع",spent:"المنفق",remaining:"المتبقي",total_budget:"الميزانية الإجمالية",expenses:"المصروفات",welcome:"أهلا بعودتك",createProject:"إنشاء مشروع",addExpense:"إضافة مصروف",projectName:"اسم المشروع",roomType:"نوع الغرفة",description:"الوصف",deadline:"الموعد النهائي",close:"إغلاق",settings:"الإعدادات",yourName:"اسمك",budgetSummary:"ملخص الميزانية",totalSpent:"إجمالي الإنفاق",newProject:"مشروع جديد",cancel:"إلغاء",category:"الفئة",amount:"المبلغ",date:"التاريخ",addExpenseBtn:"إضافة مصروف",noProjects:"لا توجد مشاريع",noExpenses:"لا توجد نفقات",project:"المشروع"},
+hi:{morning:"सुप्रभात",afternoon:"नमस्कार",evening:"शुभ संध्या",subtitle:"आपका नवीनीकरण केंद्र",projects:"प्रोजेक्ट",budget:"बजट",ai:"AI डिज़ाइन",checklist:"चेकलिस्ट",more:"और",your_projects:"आपके प्रोजेक्ट",add_project:"नया प्रोजेक्ट",in_progress:"जारी है",tasks_due:"कार्य",estimate:"अनुमान",days_left:"दिन शेष",spent_of:"खर्च",overall_progress:"कुल प्रगति",by_project:"प्रोजेक्ट के अनुसार",spent:"खर्च",remaining:"शेष",total_budget:"कुल बजट",expenses:"खर्चे",welcome:"वापस स्वागत है",createProject:"प्रोजेक्ट बनाएं",addExpense:"खर्च जोड़ें",projectName:"प्रोजेक्ट का नाम",roomType:"कमरे का प्रकार",description:"विवरण",deadline:"अंतिम तिथि",close:"बंद करें",settings:"सेटिंग्स",yourName:"आपका नाम",budgetSummary:"बजट सारांश",totalSpent:"कुल खर्च",newProject:"नया प्रोजेक्ट",cancel:"रद्द करें",category:"श्रेणी",amount:"राशि",date:"तारीख",addExpenseBtn:"खर्च जोड़ें",noProjects:"कोई प्रोजेक्ट नहीं",noExpenses:"कोई खर्च नहीं",project:"प्रोजेक्ट"},
+zh:{morning:"早上好",afternoon:"下午好",evening:"晚上好",subtitle:"您的装修指挥中心",projects:"项目",budget:"预算",ai:"AI设计",checklist:"清单",more:"更多",your_projects:"您的项目",add_project:"新建项目",in_progress:"进行中",tasks_due:"任务",estimate:"估算",days_left:"天剩余",spent_of:"已用",overall_progress:"总体进度",by_project:"按项目",spent:"已花费",remaining:"剩余",total_budget:"总预算",expenses:"支出",welcome:"欢迎回来",createProject:"创建项目",addExpense:"添加费用",projectName:"项目名称",roomType:"房间类型",description:"描述",deadline:"截止日期",close:"关闭",settings:"设置",yourName:"您的名字",budgetSummary:"预算总结",totalSpent:"总支出",newProject:"新项目",cancel:"取消",category:"类别",amount:"金额",date:"日期",addExpenseBtn:"添加费用",noProjects:"暂无项目",noExpenses:"暂无支出",project:"项目"},
+ja:{morning:"おはようございます",afternoon:"こんにちは",evening:"こんばんは",subtitle:"あなたのリノベーション指令センター",projects:"プロジェクト",budget:"予算",ai:"AIデザイン",checklist:"チェックリスト",more:"その他",your_projects:"プロジェクト一覧",add_project:"新規プロジェクト",in_progress:"進行中",tasks_due:"タスク",estimate:"見積",days_left:"日残り",spent_of:"使用済み",overall_progress:"全体進捗",by_project:"プロジェクト別",spent:"使用済",remaining:"残り",total_budget:"総予算",expenses:"支出",welcome:"おかえりなさい",createProject:"プロジェクトを作成",addExpense:"経費を追加",projectName:"プロジェクト名",roomType:"ルームタイプ",description:"説明",deadline:"期限",close:"閉じる",settings:"設定",yourName:"あなたの名前",budgetSummary:"予算サマリー",totalSpent:"合計支出",newProject:"新規プロジェクト",cancel:"キャンセル",category:"カテゴリ",amount:"金額",date:"日付",addExpenseBtn:"経費を追加",noProjects:"プロジェクトなし",noExpenses:"支出なし",project:"プロジェクト"},
+ko:{morning:"좋은 아침",afternoon:"안녕하세요",evening:"좋은 저녁",subtitle:"리노베이션 컨트롤 센터",projects:"프로젝트",budget:"예산",ai:"AI 디자인",checklist:"체크리스트",more:"더보기",your_projects:"내 프로젝트",add_project:"새 프로젝트",in_progress:"진행 중",tasks_due:"작업",estimate:"견적",days_left:"일 남음",spent_of:"사용됨",overall_progress:"전체 진행률",by_project:"프로젝트별",spent:"사용됨",remaining:"남은금액",total_budget:"총 예산",expenses:"지출",welcome:"다시 오셨습니다",createProject:"프로젝트 생성",addExpense:"비용 추가",projectName:"프로젝트 이름",roomType:"방 유형",description:"설명",deadline:"마감일",close:"닫기",settings:"설정",yourName:"당신의 이름",budgetSummary:"예산 요약",totalSpent:"총 지출",newProject:"새 프로젝트",cancel:"취소",category:"카테고리",amount:"금액",date:"날짜",addExpenseBtn:"비용 추가",noProjects:"프로젝트 없음",noExpenses:"지출 없음",project:"프로젝트"},
+tr:{morning:"Günaydın",afternoon:"İyi öğleden sonralar",evening:"İyi akşamlar",subtitle:"Tadilat kontrol merkeziniz",projects:"Projeler",budget:"Bütçe",ai:"AI Tasarım",checklist:"Kontrol Listesi",more:"Daha",your_projects:"Projeleriniz",add_project:"Yeni Proje",in_progress:"Devam Ediyor",tasks_due:"Görevler",estimate:"Tahmin",days_left:"Gün Kaldı",spent_of:"harcandı",overall_progress:"Genel İlerleme",by_project:"Projeye Göre",spent:"HARCANAN",remaining:"KALAN",total_budget:"TOPLAM BÜTÇE",expenses:"Giderler",welcome:"Tekrar hoşgeldiniz",createProject:"Proje Oluştur",addExpense:"Gider Ekle",projectName:"Proje Adı",roomType:"Oda Türü",description:"Açıklama",deadline:"Son Tarih",close:"Kapat",settings:"Ayarlar",yourName:"Adınız",budgetSummary:"Bütçe Özeti",totalSpent:"Toplam Harcanan",newProject:"Yeni Proje",cancel:"İptal",category:"Kategori",amount:"Miktar",date:"Tarih",addExpenseBtn:"Gider Ekle",noProjects:"Proje yok",noExpenses:"Gider yok",project:"Proje"}
+};
+
+function t(key) {
+  var lang = (S && S.account && S.account.lang) || localStorage.getItem("rv_lang") || "en";
+  var dict = TR[lang] || TR["en"];
+  return (dict && dict[key] !== undefined) ? dict[key] : (TR["en"][key] || key);
+}
+
+// ============================================================
+// DATA & STATE
+// ============================================================
+var PHOTOS = {
+  Kitchen:"https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=300&h=200&fit=crop",
+  Bathroom:"https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=300&h=200&fit=crop",
+  "Living Room":"https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=300&h=200&fit=crop",
+  Bedroom:"https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=300&h=200&fit=crop",
+  "Home Office":"https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=300&h=200&fit=crop",
+  "Dining Room":"https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?w=300&h=200&fit=crop",
+  Basement:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop",
+  Outdoor:"https://images.unsplash.com/photo-1558904541-efa843a96f01?w=300&h=200&fit=crop"
+};
+var EMOJI = {Kitchen:"🍽️",Bathroom:"🚿","Living Room":"🛋️",Bedroom:"🛏️","Home Office":"💻","Dining Room":"🍴",Basement:"🏚️",Outdoor:"🌿"};
+var CATEMOJI = {Materials:"🪵",Labor:"👷",Permits:"📋",Fixtures:"🔧",Appliances:"🏠",Tools:"🛠️",Other:"📦"};
+
+var LANGS = [
+  {code:"en",flag:"🇺🇸",name:"English",native:"English"},
+  {code:"ru",flag:"🇷🇺",name:"Russian",native:"Русский"},
+  {code:"es",flag:"🇪🇸",name:"Spanish",native:"Español"},
+  {code:"fr",flag:"🇫🇷",name:"French",native:"Français"},
+  {code:"de",flag:"🇩🇪",name:"German",native:"Deutsch"},
+  {code:"it",flag:"🇮🇹",name:"Italian",native:"Italiano"},
+  {code:"pt",flag:"🇧🇷",name:"Portuguese",native:"Português"},
+  {code:"ar",flag:"🇸🇦",name:"Arabic",native:"العربية"},
+  {code:"hi",flag:"🇮🇳",name:"Hindi",native:"हिन्दी"},
+  {code:"zh",flag:"🇨🇳",name:"Chinese",native:"中文"},
+  {code:"ja",flag:"🇯🇵",name:"Japanese",native:"日本語"},
+  {code:"ko",flag:"🇰🇷",name:"Korean",native:"한국어"},
+  {code:"tr",flag:"🇹🇷",name:"Turkish",native:"Türkçe"},
+  {code:"nl",flag:"🇳🇱",name:"Dutch",native:"Nederlands"},
+  {code:"pl",flag:"🇵🇱",name:"Polish",native:"Polski"},
+  {code:"sv",flag:"🇸🇪",name:"Swedish",native:"Svenska"},
+  {code:"uk",flag:"🇺🇦",name:"Ukrainian",native:"Українська"},
+  {code:"id",flag:"🇮🇩",name:"Indonesian",native:"Bahasa Indonesia"},
+  {code:"th",flag:"🇹🇭",name:"Thai",native:"ภาษาไทย"},
+  {code:"he",flag:"🇮🇱",name:"Hebrew",native:"עברית"}
+];
+
+window.defaultState = function defaultState(){
+  return {
+    projects:[
+      {id:1,name:"Kitchen Remodel",room:"Kitchen",budget:37000,desc:"Full kitchen renovation.",tasks:[{t:"Demo old cabinets",d:true},{t:"Install new cabinets",d:false},{t:"Countertops",d:false},{t:"Appliance delivery",d:false}],notes:""},
+      {id:2,name:"Bathroom Upgrade",room:"Bathroom",budget:15000,desc:"Walk-in shower, new vanity.",tasks:[{t:"Tile selection",d:true},{t:"Plumber booked",d:true},{t:"Vanity ordered",d:false}],notes:""},
+      {id:3,name:"Living Room Makeover",room:"Living Room",budget:10000,desc:"New flooring, accent wall.",tasks:[{t:"Paint accent wall",d:false},{t:"Order flooring",d:false}],notes:""}
+    ],
+    expenses:[
+      {id:1,desc:"Oak hardwood flooring",cat:"Materials",proj:"Kitchen Remodel",amt:20800,date:"2025-01-10"},
+      {id:2,desc:"Plumber deposit",cat:"Labor",proj:"Bathroom Upgrade",amt:10800,date:"2025-01-14"},
+      {id:3,desc:"Paint supplies",cat:"Materials",proj:"Living Room Makeover",amt:3000,date:"2025-01-20"}
+    ],
+    checklist:[
+      {phase:"Planning",icon:"📋",items:[{id:"p1",t:"Define project scope",s:"What exactly needs to be done?",d:false},{id:"p2",t:"Set your budget",s:"Include a 10-15% buffer",d:false},{id:"p3",t:"Research contractors",s:"Get at least 3 quotes",d:false},{id:"p4",t:"Check permit requirements",s:"Structural, electrical, plumbing",d:false}]},
+      {phase:"Design",icon:"🎨",items:[{id:"d1",t:"Create mood board",s:"Colors, textures, styles",d:false},{id:"d2",t:"Finalise floor plan",s:"Measure twice, cut once",d:false},{id:"d3",t:"Choose materials",s:"Flooring, tiles, paint",d:false}]},
+      {phase:"Construction",icon:"🏗️",items:[{id:"c1",t:"Clear and protect space",s:"Move furniture, cover floors",d:false},{id:"c2",t:"Demolition",s:"Remove old fixtures safely",d:false},{id:"c3",t:"Rough-in work",s:"Electrical, plumbing, HVAC",d:false},{id:"c4",t:"Install flooring",s:"After painting",d:false},{id:"c5",t:"Install fixtures",s:"Cabinets, tiles, trim",d:false}]},
+      {phase:"Completion",icon:"✅",items:[{id:"f1",t:"Final walkthrough",s:"Check everything",d:false},{id:"f2",t:"Touch-up",s:"Fix any issues",d:false},{id:"f3",t:"Clean up",s:"Deep clean finished space",d:false}]}
+    ],
+    premium:false,
+    account:{name:"Space X",email:"spacex@example.com",phone:"",location:"",notif:false,currency:"USD ($)",currSymbol:"$",lang:"en",langName:"English"}
+  };
+}
+
+var S;
+try { S = JSON.parse(localStorage.getItem("rv6")); if(!S||!S.projects) S=defaultState(); if(!S.account) S.account=defaultState().account; } catch(e){ S=defaultState(); }
+function save(){
+  try{ localStorage.setItem("rv6",JSON.stringify(S)); }catch(e){}
+  // Sync to Firestore if logged in
+  if(window.currentUser && window.fbFns && window.fbDb){
+    var fns=window.fbFns; var db=window.fbDb;
+    var uid=window.currentUser.uid;
+    var ref=fns.doc(db,'users',uid);
+    try{ fns.setDoc(ref,{state:JSON.stringify(S)},{merge:true}).catch(function(){}); }catch(e){}
+  }
+}
+function pSpent(name){ return S.expenses.filter(function(e){return e.proj===name;}).reduce(function(s,e){return s+e.amt;},0); }
+function fmt(n){ var sym=(S&&S.account&&S.account.currSymbol)||localStorage.getItem("rv_currency")||"$"; return sym+n.toLocaleString(); }
+
+// ============================================================
+// TOAST
+// ============================================================
+var toastTmr;
+function toast(msg){ var el=document.getElementById("toast"); el.textContent=msg; el.style.opacity="1"; clearTimeout(toastTmr); toastTmr=setTimeout(function(){el.style.opacity="0";},2500); }
+
+// ============================================================
+// MODALS
+// ============================================================
+function openModal(id){ document.getElementById(id).classList.add("on"); }
+function closeModal(id){ document.getElementById(id).classList.remove("on"); }
+
+// ============================================================
+// NAVIGATION
+// ============================================================
+var curPage="projects", prevPage="projects";
+
+function showPage(page){
+  prevPage=curPage; curPage=page;
+  var pages=document.querySelectorAll(".page");
+  for(var i=0;i<pages.length;i++) pages[i].classList.remove("on");
+  var pg=document.getElementById("pg-"+page);
+  if(pg) pg.classList.add("on");
+  document.getElementById("scrl").scrollTop=0;
+  document.getElementById("fab").style.display=(page==="projects"||page==="budget"||page==="detail")?"flex":"none";
+  renderPage(page);
+}
+
+function switchTab(page,el){
+  var tabs=document.querySelectorAll(".ttab");
+  for(var i=0;i<tabs.length;i++) tabs[i].classList.remove("on");
+  el.classList.add("on");
+  syncNav(page); showPage(page);
+}
+
+function navTo(page,el){
+  var btns=document.querySelectorAll(".nbtn");
+  for(var i=0;i<btns.length;i++) btns[i].classList.remove("on");
+  el.classList.add("on");
+  syncTab(page); showPage(page);
+}
+
+function syncNav(page){ var btns=document.querySelectorAll(".nbtn"); for(var i=0;i<btns.length;i++) btns[i].classList.remove("on"); var m=document.querySelector(".nbtn[data-p='"+page+"']"); if(m) m.classList.add("on"); }
+function syncTab(page){ var tabs=document.querySelectorAll(".ttab"); for(var i=0;i<tabs.length;i++) tabs[i].classList.remove("on"); var m=document.querySelector(".ttab[data-p='"+page+"']"); if(m) m.classList.add("on"); }
+function clearNav(){ var all=document.querySelectorAll(".nbtn,.ttab"); for(var i=0;i<all.length;i++) all[i].classList.remove("on"); }
+function goBack(){ var t=(prevPage==="detail")?"projects":prevPage; showPage(t); syncNav(t); syncTab(t); }
+function goAccount(){ clearNav(); showPage("account"); }
+function fabClick(){ if(curPage==="projects") openModal("new-proj-modal"); else if(curPage==="budget") openModal("exp-modal"); else if(curPage==="detail") openExpForDetail(); }
+
+function renderPage(p){
+  if(p==="projects") renderProjects();
+  else if(p==="budget") renderBudget();
+  else if(p==="checklist") renderChecklist();
+  else if(p==="detail") renderDetail();
+  else if(p==="account") renderAccount();
+  else if(p==="premium"){ document.getElementById("prem-status").style.display=S.premium?"block":"none"; updateAILock(); }
+}
+
+// ============================================================
+// LANGUAGE - applyLanguage updates all UI text + re-renders
+// ============================================================
+function sweepI18n(){
+  var els = document.querySelectorAll("[data-i18n]");
+  for(var i=0;i<els.length;i++){
+    var key = els[i].getAttribute("data-i18n");
+    var val = t(key);
+    if(val && val !== key) els[i].textContent = val;
+  }
+}
+function applyLanguage(){
+  sweepI18n();
+  var h=new Date().getHours();
+  var g=h<12?t("morning"):h<17?t("afternoon"):t("evening");
+  var name=(S.account&&S.account.name)||"User";
+  // Greeting
+  var grEl=document.getElementById("greeting-text"); if(grEl) grEl.textContent=g+", "+name;
+  var subEl=document.getElementById("greeting-sub"); if(subEl) subEl.textContent=t("subtitle");
+  // Top tabs
+  setText("tab-projects",t("projects"));
+  setText("tab-budget",t("budget"));
+  setText("tab-ai",t("ai"));
+  setText("tab-checklist",t("checklist"));
+  // Bottom nav
+  setText("nav-projects",t("projects"));
+  setText("nav-budget",t("budget"));
+  setText("nav-ai",t("ai"));
+  setText("nav-checklist",t("checklist"));
+  setText("nav-more",t("more"));
+  // Section titles
+  setText("your-projects-title",t("your_projects"));
+  setText("add-proj-lbl",t("add_project"));
+  setText("by-project-title",t("by_project"));
+  setText("total-budget-lbl",t("total_budget"));
+  setText("spent-lbl",t("spent"));
+  setText("remaining-lbl",t("remaining"));
+  setText("days-left-lbl",t("days_left"));
+  setText("overall-progress-lbl",t("overall_progress"));
+  setText("expenses-title",t("expenses"));
+  // New Project modal
+  setText("np-modal-title",t("newProject"));
+  setText("np-name-lbl",t("projectName"));
+  setText("np-room-lbl",t("roomType"));
+  setText("np-budget-lbl",t("budget"));
+  setText("np-desc-lbl",t("description"));
+  setText("np-cancel-btn",t("cancel"));
+  setText("np-submit-btn",t("createProject"));
+  // Add Expense modal
+  setText("exp-modal-title",t("addExpenseBtn"));
+  setText("ex-desc-lbl",t("description"));
+  setText("ex-cat-lbl",t("category"));
+  setText("ex-proj-lbl",t("project"));
+  setText("ex-amt-lbl",t("amount"));
+  setText("exp-cancel-btn",t("cancel"));
+  setText("exp-submit-btn",t("addExpenseBtn"));
+  // Placeholders
+  var npName=document.getElementById("np-name"); if(npName) npName.placeholder=t("projectName")+"...";
+  var exDesc=document.getElementById("ex-desc"); if(exDesc) exDesc.placeholder=t("description")+"...";
+  // RTL support
+  var rtl=["ar","he"];
+  var isRtl=rtl.indexOf((S.account&&S.account.lang)||"en")>=0;
+  document.body.style.direction=isRtl?"rtl":"ltr";
+  document.body.style.textAlign=isRtl?"right":"left";
+  // Batch re-renders to prevent flicker
+  requestAnimationFrame(function() {
+    renderProjects();
+    renderBudget();
+    renderChecklist();
+    if(curPage==="detail") renderDetail();
+  });
+}
+
+function setText(id,val){ var el=document.getElementById(id); if(el) el.textContent=val; }
+
+// ============================================================
+// PROJECTS
+// ============================================================
+function renderProjects(){
+  var tb=S.projects.reduce(function(s,p){return s+p.budget;},0);
+  var ts=S.expenses.reduce(function(s,e){return s+e.amt;},0);
+  var pct=tb>0?Math.min(100,Math.round(ts/tb*100)):0;
+  document.getElementById("h-spent").innerHTML=fmt(ts)+" <span>"+t("spent_of")+" "+fmt(tb)+"</span>";
+  document.getElementById("h-pct").textContent=pct+"%";
+  setTimeout(function(){document.getElementById("h-bar").style.width=pct+"%";},80);
+  // Limit banner
+  var lb=document.getElementById("limit-banner");
+  lb.innerHTML=(!S.premium&&S.projects.length>=8)?'<div class="prem-banner" onclick="showPage(\'premium\')"><div style="font-size:20px">👑</div><div style="flex:1"><div style="font-size:13px;font-weight:700;color:var(--green)">Unlock Unlimited Projects</div><div style="font-size:11px;color:var(--muted)">Max 8 projects reached — Upgrade for more</div></div><div style="font-size:12px;font-weight:700;color:var(--green)">Upgrade →</div></div>':"";
+  // Cards
+  var html="";
+  for(var i=0;i<S.projects.length;i++){
+    var p=S.projects[i];
+    var s=pSpent(p.name);
+    var pp=p.budget>0?Math.min(100,Math.round(s/p.budget*100)):0;
+    var pending=(p.tasks||[]).filter(function(t){return !t.d;}).length;
+    var est=Math.round(p.budget*0.035/10)*10;
+    var photo=PHOTOS[p.room]||"";
+    html+='<div class="card pcard" onclick="openDetail('+p.id+')">';
+    html+='<div class="pcard-body">';
+    html+='<div class="pthumb">';
+    if(photo) html+='<div class="pphoto" style="background-image:url('+photo+')"></div>';
+    else html+='<div class="pphoto" style="display:flex;align-items:center;justify-content:center;font-size:40px">'+(EMOJI[p.room]||"🏠")+"</div>";
+    html+='<div class="proom-tag">'+p.room+"</div></div>";
+    html+='<div class="pinfo">';
+    html+='<div class="pname-row"><div class="pname">'+p.name+'</div><div class="pdot"></div></div>';
+    html+='<div><span class="pspent-big">'+fmt(s)+'</span> <span class="pspent-of">'+t("spent_of")+' '+fmt(p.budget)+'</span><span class="ppct">'+pp+'%</span></div>';
+    html+='<div class="pbar"><div class="pbar-fill" style="width:'+pp+'%"></div></div>';
+    html+='<div class="pfull">'+fmt(s)+" / "+fmt(p.budget)+"</div>";
+    html+="</div></div>";
+    html+="<div class=\"pfooter\"><div class=\"pip\"><div class=\"pip-dot\">⊖</div><span class=\"pip-txt\">"+t("in_progress")+"</span><span class=\"ptasks\">"+pending+" "+t("tasks_due")+"</span></div><span class=\"pest\">"+fmt(est)+" "+t("estimate")+" ›</span></div>";
+    html+="</div>";
+  }
+  document.getElementById("proj-list").innerHTML=html;
+}
+
+// ============================================================
+// PROJECT DETAIL
+// ============================================================
+var detailId=null;
+function openDetail(id){ detailId=id; clearNav(); showPage("detail"); }
+function deleteProj(){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p) return;
+  if(!confirm('Delete "'+p.name+'"?')) return;
+  S.expenses=S.expenses.filter(function(e){return e.proj!==p.name;});
+  S.projects=S.projects.filter(function(pr){return pr.id!==p.id;});
+  save(); toast("Deleted!"); showPage("projects"); syncNav("projects"); syncTab("projects");
+}
+function renderDetail(){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p) return;
+  var s=pSpent(p.name);
+  var remaining=Math.max(0,p.budget-s);
+  var tasks=p.tasks||[];
+  var done=tasks.filter(function(t){return t.d;}).length;
+  var taskPct=tasks.length>0?Math.round(done/tasks.length*100):0;
+  var budgetPct=p.budget>0?Math.min(100,Math.round(s/p.budget*100)):0;
+  document.getElementById("d-title").textContent=p.name;
+  document.getElementById("d-meta").textContent=p.room+" · "+p.desc;
+  document.getElementById("d-pct").textContent=taskPct+"%";
+  setTimeout(function(){
+    document.getElementById("d-bar").style.width=taskPct+"%";
+    document.getElementById("d-budget-bar").style.width=budgetPct+"%";
+  },80);
+  // Budget card
+  document.getElementById("d-spent-amt").textContent=fmt(s);
+  document.getElementById("d-remain-amt").textContent=fmt(remaining);
+  document.getElementById("d-budget-total-label").textContent=fmt(p.budget);
+  // Checklist preview (up to 4 tasks)
+  var cl=document.getElementById("d-checklist-preview");
+  if(!tasks.length){cl.innerHTML='<div style="font-size:11px;color:var(--muted);text-align:center;padding:8px 0">No tasks yet</div>';}
+  else{var ch="";var shown=Math.min(4,tasks.length);for(var i=0;i<shown;i++){var tk=tasks[i];ch+='<div style="display:flex;align-items:center;gap:7px;margin-bottom:7px"><div style="width:16px;height:16px;border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;'+(tk.d?'background:var(--green);color:#fff':'border:2px solid var(--border2)')+'\">'+(tk.d?'✓':'')+'</div><div style="font-size:11px;'+(tk.d?'text-decoration:line-through;color:var(--muted)':'color:var(--text)')+'">'+tk.t+'</div></div>';}cl.innerHTML=ch;}
+  // Timeline preview (expenses as timeline, up to 4)
+  var tl=document.getElementById("d-timeline-preview");
+  var exps=S.expenses.filter(function(e){return e.proj===p.name;});
+  if(!exps.length){tl.innerHTML='<div style="font-size:11px;color:var(--muted);text-align:center;padding:8px 0">No expenses yet</div>';}
+  else{var th="";var tshown=Math.min(4,exps.length);for(var j=0;j<tshown;j++){var ex=exps[j];th+='<div style="display:flex;align-items:center;gap:7px;margin-bottom:7px"><div style="width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0"></div><div style="font-size:11px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+ex.desc+'</div></div>';}tl.innerHTML=th;}
+  // Photos
+  renderDetailPhotos(p);
+  renderDetailTasks(); renderDetailExp();
+  var n=document.getElementById("d-notes"); if(n) n.value=p.notes||"";
+}
+function renderDetailPhotos(p){
+  var photos=p.photos||[];
+  var grid=document.getElementById("d-photos-grid");
+  var empty=document.getElementById("d-photos-empty");
+  if(!photos.length){grid.innerHTML="";empty.style.display="block";return;}
+  empty.style.display="none";
+  var labels=["Before","Progress","After"];
+  var h="";
+  for(var i=0;i<photos.length;i++){
+    h+='<div style="position:relative"><img src="'+photos[i]+'" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px" />';
+    h+='<div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.5);border-radius:0 0 8px 8px;text-align:center;font-size:10px;font-weight:700;padding:3px;color:#fff">'+(labels[i]||("Photo "+(i+1)))+'</div>';
+    h+='<button onclick="delDetailPhoto('+i+')" style="position:absolute;top:3px;right:3px;background:rgba(0,0,0,0.6);border:none;border-radius:50%;width:18px;height:18px;color:#fff;font-size:10px;cursor:pointer;display:flex;align-items:center;justify-content:center">✕</button></div>';
+  }
+  grid.innerHTML=h;
+}
+function addDetailPhotos(event){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p) return;
+  if(!p.photos) p.photos=[];
+  var files=event.target.files;
+  var loaded=0;
+  for(var i=0;i<files.length;i++){
+    (function(file){
+      var r=new FileReader();
+      r.onload=function(e){p.photos.push(e.target.result);loaded++;if(loaded===files.length){save();renderDetailPhotos(p);}};
+      r.readAsDataURL(file);
+    })(files[i]);
+  }
+  event.target.value="";
+}
+function delDetailPhoto(idx){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p||!p.photos) return;
+  p.photos.splice(idx,1); save(); renderDetailPhotos(p);
+}
+function dTab(tab,el){
+  document.getElementById("d-tasks-panel").style.display=tab==="tasks"?"block":"none";
+  document.getElementById("d-expenses-panel").style.display=tab==="expenses"?"block":"none";
+  document.getElementById("d-notes-panel").style.display=tab==="notes"?"block":"none";
+  var dtabs=document.querySelectorAll(".dtab"); for(var i=0;i<dtabs.length;i++) dtabs[i].classList.remove("on");
+  el.classList.add("on");
+}
+function renderDetailTasks(){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p) return;
+  var tasks=p.tasks||[];
+  var el=document.getElementById("d-task-list");
+  if(!tasks.length){el.innerHTML='<div class="card p14" style="text-align:center;color:var(--muted)"><div style="font-size:32px;margin-bottom:6px">📋</div><div>No tasks yet</div></div>';return;}
+  var html='<div class="card" style="overflow:hidden">';
+  for(var i=0;i<tasks.length;i++){
+    var tk=tasks[i];
+    html+='<div class="titem '+(tk.d?"done":"")+'" onclick="toggleTask('+i+')">';
+    html+='<div class="tbox">'+(tk.d?"✓":"")+"</div>";
+    html+='<div class="ttxt">'+tk.t+"</div>";
+    html+='<button onclick="event.stopPropagation();delTask('+i+')" style="background:none;border:none;color:var(--muted2);font-size:15px;cursor:pointer;padding:4px">✕</button>';
+    html+="</div>";
+  }
+  el.innerHTML=html+"</div>";
+}
+function addTask(){
+  var inp=document.getElementById("new-task"); var txt=inp.value.trim(); if(!txt) return;
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p) return;
+  if(!p.tasks) p.tasks=[];
+  p.tasks.push({t:txt,d:false}); inp.value=""; save(); renderDetailTasks(); renderDetail(); toast("Task added!");
+}
+function toggleTask(idx){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p||!p.tasks) return;
+  p.tasks[idx].d=!p.tasks[idx].d; save(); renderDetailTasks(); renderDetail();
+}
+function delTask(idx){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p||!p.tasks) return;
+  p.tasks.splice(idx,1); save(); renderDetailTasks(); renderDetail();
+}
+function renderDetailExp(){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p) return;
+  var exps=S.expenses.filter(function(e){return e.proj===p.name;});
+  var el=document.getElementById("d-exp-list");
+  if(!exps.length){el.innerHTML='<div style="padding:28px;text-align:center;color:var(--muted)"><div style="font-size:32px;margin-bottom:6px">💰</div><div>No expenses yet</div></div>';return;}
+  var html="";
+  for(var i=exps.length-1;i>=0;i--){var e=exps[i];html+='<div class="erow"><div class="eicon">'+(CATEMOJI[e.cat]||"📦")+'</div><div style="flex:1"><div class="edesc">'+e.desc+'</div><div class="emeta">'+e.cat+" · "+e.date+'</div></div><div class="eamt">$'+fmt(e.amt)+"</div></div>";}
+  el.innerHTML=html;
+}
+function openExpForDetail(){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p) return;
+  var sel=document.getElementById("ex-proj");
+  var h=""; for(var i=0;i<S.projects.length;i++) h+="<option "+(S.projects[i].id===p.id?"selected":"")+">"+S.projects[i].name+"</option>";
+  sel.innerHTML=h; openModal("exp-modal");
+}
+function saveNotes(){
+  var p=S.projects.find(function(p){return p.id===detailId;}); if(!p) return;
+  p.notes=document.getElementById("d-notes").value; save();
+}
+
+// ============================================================
+// ADD PROJECT
+// ============================================================
+function addProject(){
+  if(!S.premium&&S.projects.length>=8){closeModal("new-proj-modal");showPage("premium");return;}
+  var name=document.getElementById("np-name").value.trim();
+  var room=document.getElementById("np-room").value;
+  var budget=parseFloat(document.getElementById("np-budget").value)||0;
+  var desc=document.getElementById("np-desc").value.trim()||room+" renovation project.";
+  if(!name){toast("Enter a project name");return;}
+  S.projects.push({id:Date.now(),name:name,room:room,budget:budget,desc:desc,tasks:[],notes:""});
+  closeModal("new-proj-modal");
+  document.getElementById("np-name").value=""; document.getElementById("np-budget").value=""; document.getElementById("np-desc").value="";
+  var sel=document.getElementById("ex-proj"); var h=""; for(var i=0;i<S.projects.length;i++) h+="<option>"+S.projects[i].name+"</option>"; sel.innerHTML=h;
+  save(); toast("Project created!"); renderProjects();
+}
+
+// ============================================================
+// BUDGET
+// ============================================================
+function renderBudget(){
+  var tb=S.projects.reduce(function(s,p){return s+p.budget;},0);
+  var ts=S.expenses.reduce(function(s,e){return s+e.amt;},0);
+  var pct=tb>0?Math.min(100,Math.round(ts/tb*100)):0;
+  document.getElementById("b-total").textContent=fmt(tb);
+  document.getElementById("b-spent").textContent=fmt(ts);
+  document.getElementById("b-left").textContent=fmt(Math.max(0,tb-ts));
+  setTimeout(function(){document.getElementById("b-bar").style.width=pct+"%";},80);
+  var byP="";
+  for(var i=0;i<S.projects.length;i++){var p=S.projects[i];var s=pSpent(p.name);var pp=p.budget>0?Math.min(100,Math.round(s/p.budget*100)):0;byP+='<div style="padding:12px 16px;border-bottom:1px solid var(--border)"><div style="display:flex;justify-content:space-between;margin-bottom:7px"><span style="font-size:13px;font-weight:600">'+p.name+'</span><span style="font-size:13px;font-weight:700;color:var(--green)">$'+fmt(s)+" / $"+fmt(p.budget)+'</span></div><div class="prog"><div class="pf" style="width:'+pp+"%;background:"+(pp>90?"var(--red)":pp>70?"var(--amber)":"")+'"></div></div></div>';}
+  document.getElementById("b-by-proj").innerHTML=byP;
+  if(!S.expenses.length){document.getElementById("exp-list").innerHTML='<div style="padding:28px;text-align:center;color:var(--muted)"><div style="font-size:32px;margin-bottom:6px">💰</div><div>No expenses yet</div></div>';return;}
+  var html="";
+  for(var i=S.expenses.length-1;i>=0;i--){var e=S.expenses[i];html+='<div class="erow"><div class="eicon">'+(CATEMOJI[e.cat]||"📦")+'</div><div style="flex:1"><div class="edesc">'+e.desc+'</div><div class="emeta">'+e.proj+" · "+e.cat+" · "+e.date+'</div></div><div class="eamt">$'+fmt(e.amt)+"</div></div>";}
+  document.getElementById("exp-list").innerHTML=html;
+}
+function addExpense(){
+  var desc=document.getElementById("ex-desc").value.trim();
+  var cat=document.getElementById("ex-cat").value;
+  var proj=document.getElementById("ex-proj").value;
+  var amt=parseFloat(document.getElementById("ex-amt").value)||0;
+  if(!desc||!amt){toast("Fill in all fields");return;}
+  S.expenses.push({id:Date.now(),desc:desc,cat:cat,proj:proj,amt:amt,date:new Date().toISOString().split("T")[0]});
+  closeModal("exp-modal");
+  document.getElementById("ex-desc").value=""; document.getElementById("ex-amt").value="";
+  save(); toast("Expense added!");
+  if(curPage==="budget") renderBudget(); else if(curPage==="projects") renderProjects(); else if(curPage==="detail") renderDetail();
+}
+
+// ============================================================
+// CHECKLIST
+// ============================================================
+function renderChecklist(){
+  var all=[];for(var i=0;i<S.checklist.length;i++) all=all.concat(S.checklist[i].items);
+  var done=all.filter(function(i){return i.d;}).length;
+  var pct=all.length?Math.round(done/all.length*100):0;
+  document.getElementById("ck-pct").textContent=pct+"%";
+  document.getElementById("ck-lbl").textContent=done+" / "+all.length;
+  setTimeout(function(){document.getElementById("ck-bar").style.width=pct+"%";},80);
+  var el=document.getElementById("ck-items"); el.innerHTML="";
+  for(var i=0;i<S.checklist.length;i++){
+    var sec=S.checklist[i];
+    var sd=sec.items.filter(function(it){return it.d;}).length;
+    var phDiv=document.createElement("div"); phDiv.className="phase";
+    var hdr=document.createElement("div"); hdr.className="ph-hdr";
+    hdr.innerHTML='<span style="font-size:17px">'+sec.icon+'</span><span class="ph-name">'+sec.phase+'</span><span class="ph-ct">'+sd+"/"+sec.items.length+"</span>";
+    phDiv.appendChild(hdr);
+    var citems=document.createElement("div"); citems.className="citems";
+    for(var j=0;j<sec.items.length;j++){
+      var item=sec.items[j];
+      var row=document.createElement("div"); row.className="citem"+(item.d?" done":"");
+      row.setAttribute("data-id",item.id);
+      row.innerHTML='<div class="cbox">'+(item.d?"✓":"")+'</div><div><div class="ctxt">'+item.t+'</div>'+(item.s?'<div class="csub">'+item.s+'</div>':'')+'</div>';
+      row.onclick=(function(id){return function(){toggleCheck(id);};})(item.id);
+      citems.appendChild(row);
+    }
+    phDiv.appendChild(citems); el.appendChild(phDiv);
+  }
+}
+function toggleCheck(id){
+  for(var i=0;i<S.checklist.length;i++){var items=S.checklist[i].items;for(var j=0;j<items.length;j++){if(items[j].id===id){items[j].d=!items[j].d;break;}}}
+  save(); renderChecklist();
+}
+
+// ============================================================
+// INSPIRE
+// ============================================================
+function openInspo(title,icon,desc){
+  document.getElementById("inspo-title").textContent=icon+" "+title;
+  document.getElementById("inspo-desc").textContent=desc;
+  document.getElementById("inspo-ai-btn").onclick=function(){closeModal("inspo-modal");var v=document.getElementById("ai-vision");if(v)v.value=title+" style.";showPage("ai");syncNav("ai");syncTab("ai");};
+  openModal("inspo-modal");
+}
+
+// ============================================================
+// AI DESIGN
+// ============================================================
+var AI_PLANS={Kitchen:{colors:["#2C3E50","#E8DCC8","#8B7355"],mats:["Quartz countertops","Shaker cabinets","Subway tile backsplash","Hardwood flooring"],tips:["Install under-cabinet lighting","Add a kitchen island if space allows","Invest in quality hardware"]},Bathroom:{colors:["#F5F5F0","#C4A882","#3D5A80"],mats:["Porcelain tile","Frameless glass shower","Freestanding tub","Heated floor"],tips:["Rain shower head makes a big impact","Large format tiles look more spacious","Heated towel rail adds luxury"]},"Living Room":{colors:["#1A1A2E","#C4A882","#4A90D9"],mats:["Engineered hardwood","Linen upholstery","Statement rug","Reclaimed wood"],tips:["Layer lighting","Feature wall creates focal point","Mix textures"]},Bedroom:{colors:["#2C2C2C","#E8D5B7","#7FB3D3"],mats:["Plush carpet","Velvet headboard","Built-in wardrobes","Blackout curtains"],tips:["Invest in quality bedding","Soft ambient lighting","Maximize storage"]}};
+function generateDesign(){
+  if(!S.premium){document.getElementById("ai-result").innerHTML='<div class="card p14" style="text-align:center"><div style="font-size:36px;margin-bottom:8px">✨</div><div style="font-size:14px;font-weight:700;margin-bottom:4px">Premium Feature</div><div style="font-size:13px;color:var(--muted);margin-bottom:14px">Upgrade to unlock AI Design</div><button onclick="showPage(\'premium\')" class="btn btn-g" style="width:auto;padding:10px 20px">Upgrade Now</button></div>';return;}
+  var room=document.getElementById("ai-room").value;
+  var budget=document.getElementById("ai-budget").value;
+  var chips=document.querySelectorAll("#chips .chip.on");
+  var styles=[]; for(var i=0;i<chips.length;i++) styles.push(chips[i].textContent);
+  var styleStr=styles.join(", ")||"Modern";
+  var btn=document.getElementById("ai-btn"); btn.textContent="Generating..."; btn.disabled=true;
+  var plan=AI_PLANS[room]||AI_PLANS["Living Room"];
+  setTimeout(function(){
+    var sw=""; for(var i=0;i<plan.colors.length;i++) sw+='<div class="swatch" style="background:'+plan.colors[i]+'"></div>';
+    var mt=""; for(var i=0;i<plan.mats.length;i++) mt+='<span class="mat-tag">'+plan.mats[i]+"</span>";
+    var tp=""; for(var i=0;i<plan.tips.length;i++) tp+='<div style="display:flex;gap:8px;margin-bottom:8px"><span style="color:var(--green)">✦</span><span style="font-size:13px;color:var(--muted);line-height:1.5">'+plan.tips[i]+"</span></div>";
+    var aiHtml='<div class="card p16"><div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><div style="width:42px;height:42px;border-radius:12px;background:var(--gdim);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:20px">'+(EMOJI[room]||'🏠')+'</div><div><div style="font-size:16px;font-weight:800">'+styleStr+' '+room+'</div><div style="font-size:12px;color:var(--muted)">'+budget+'</div></div></div><div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Color Palette</div><div class="swatches">'+sw+'</div><div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Materials</div><div class="mat-tags">'+mt+'</div><div style="font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;margin-top:14px">Pro Tips</div>'+tp+'<button id="ai-save-btn" class="btn btn-g" style="margin-top:14px">💾 Save as Project</button></div>';
+    document.getElementById('ai-result').innerHTML=aiHtml;
+    var saveBtn=document.getElementById('ai-save-btn');
+    if(saveBtn){var savedRoom=room;saveBtn.onclick=function(){saveAIDesign(savedRoom);};}
+    btn.textContent="✦ Generate Design Plan"; btn.disabled=false;
+  },1600);
+}
+function saveAIDesign(room){S.projects.push({id:Date.now(),name:room+" (AI Design)",room:room,budget:15000,desc:"AI-generated design.",tasks:[],notes:""});save();toast("Saved!");showPage("projects");syncNav("projects");syncTab("projects");}
+function updateAILock(){
+  var card=document.getElementById("ai-card"); if(!card) return;
+  var ex=card.querySelector(".lock-over");
+  if(!S.premium){if(!ex){var l=document.createElement("div");l.className="lock-over";l.innerHTML='<div style="font-size:30px">✨</div><div style="font-size:14px;font-weight:700;margin-top:8px">Premium Feature</div><div style="font-size:12px;color:var(--muted);margin-top:4px;text-align:center">Upgrade to unlock AI Design</div><button class="btn btn-g" onclick="showPage(&quot;premium&quot;)" style="margin-top:12px;width:auto;padding:9px 18px;font-size:13px">Upgrade →</button>';card.appendChild(l);}}
+  else{if(ex)ex.remove();}
+}
+
+// ============================================================
+// TOOLS
+// ============================================================
+function switchTool(tool,el){
+  document.getElementById("tool-room").style.display=tool==="room"?"block":"none";
+  document.getElementById("tool-mat").style.display=tool==="mat"?"block":"none";
+  document.getElementById("tool-ba").style.display=tool==="ba"?"block":"none";
+  var tabs=document.querySelectorAll(".ttab2"); for(var i=0;i<tabs.length;i++) tabs[i].classList.remove("on");
+  el.classList.add("on");
+  if(tool==="mat"&&matRows.length===0) addMatRow();
+}
+function calcRoom(){
+  var l=parseFloat(document.getElementById("rl").value)||0; var w=parseFloat(document.getElementById("rw").value)||0;
+  var res=document.getElementById("room-res"); if(!l||!w){res.style.display="none";return;}
+  var area=l*w; var paint=Math.ceil(area/350*2*10)/10;
+  document.getElementById("r-area").textContent=Math.round(area);
+  document.getElementById("r-paint").textContent=paint.toFixed(1);
+  res.style.display="block";
+}
+var matRows=[];
+function addMatRow(name,unit,price,qty){name=name||"";unit=unit||"sq ft";price=price||0;qty=qty||1;matRows.push({id:Date.now(),name:name,unit:unit,price:price,qty:qty});renderMatRows();}
+function quickMat(n,u,p){addMatRow(n,u,p,1);toast(n+" added!");}
+function renderMatRows(){
+  var el=document.getElementById("mat-rows"); if(!el) return;
+  el.innerHTML="";
+  for(var i=0;i<matRows.length;i++){
+    var r=matRows[i];
+    var row=document.createElement("div");
+    row.style.cssText="background:rgba(12,30,15,.8);border:1px solid var(--border);border-radius:11px;padding:11px;margin-bottom:9px";
+    var nameRow=document.createElement("div");
+    nameRow.style.cssText="display:flex;gap:8px;margin-bottom:7px";
+    var nameInp=document.createElement("input");
+    nameInp.className="finput";
+    nameInp.style.cssText="flex:1;font-size:12px;padding:8px 11px";
+    nameInp.placeholder="Material name";
+    nameInp.value=r.name;
+    (function(idx){ nameInp.oninput=function(){updMat(idx,"name",this.value);}; })(i);
+    var delBtn=document.createElement("button");
+    delBtn.style.cssText="background:none;border:none;color:var(--red);font-size:17px;cursor:pointer";
+    delBtn.textContent="✕";
+    (function(idx){ delBtn.onclick=function(){delMat(idx);}; })(i);
+    nameRow.appendChild(nameInp); nameRow.appendChild(delBtn);
+    var grid=document.createElement("div");
+    grid.style.cssText="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px";
+    // QTY
+    var qtyDiv=document.createElement("div");
+    var qtyLbl=document.createElement("div"); qtyLbl.className="flabel"; qtyLbl.textContent="QTY";
+    var qtyInp=document.createElement("input"); qtyInp.className="finput";
+    qtyInp.style.cssText="font-size:14px;font-weight:700;text-align:center;padding:7px";
+    qtyInp.type="number"; qtyInp.min="0"; qtyInp.value=r.qty;
+    (function(idx){ qtyInp.oninput=function(){updMat(idx,"qty",this.value);}; })(i);
+    qtyDiv.appendChild(qtyLbl); qtyDiv.appendChild(qtyInp);
+    // PRICE
+    var prDiv=document.createElement("div");
+    var prLbl=document.createElement("div"); prLbl.className="flabel"; prLbl.textContent="$/Unit";
+    var prInp=document.createElement("input"); prInp.className="finput";
+    prInp.style.cssText="font-size:14px;font-weight:700;text-align:center;padding:7px";
+    prInp.type="number"; prInp.step="0.01"; prInp.min="0"; prInp.value=r.price;
+    (function(idx){ prInp.oninput=function(){updMat(idx,"price",this.value);}; })(i);
+    prDiv.appendChild(prLbl); prDiv.appendChild(prInp);
+    // TOTAL
+    var totDiv=document.createElement("div");
+    var totLbl=document.createElement("div"); totLbl.className="flabel"; totLbl.textContent="Total";
+    var totVal=document.createElement("div");
+    totVal.style.cssText="padding:7px;font-size:13px;font-weight:700;color:var(--green);text-align:center";
+    totVal.textContent=fmt(r.qty*r.price);
+    totDiv.appendChild(totLbl); totDiv.appendChild(totVal);
+    grid.appendChild(qtyDiv); grid.appendChild(prDiv); grid.appendChild(totDiv);
+    row.appendChild(nameRow); row.appendChild(grid);
+    el.appendChild(row);
+  }
+  updMatTotal();
+}
+function updMat(i,f,v){if(!matRows[i])return;matRows[i][f]=(f==="name"||f==="unit")?v:parseFloat(v)||0;updMatTotal();}
+function delMat(i){matRows.splice(i,1);renderMatRows();}
+function updMatTotal(){var t=matRows.reduce(function(s,r){return s+(r.qty*r.price);},0);var el=document.getElementById("mat-total");if(el)el.textContent=fmt(t);}
+var bUrl=null,aUrl=null;
+function loadBA(type,input){
+  var file=input.files[0]; if(!file) return;
+  var reader=new FileReader();
+  reader.onload=function(e){
+    var url=e.target.result;
+    if(type==="b"){bUrl=url;var img=document.getElementById("b-img");img.src=url;img.style.display="block";document.getElementById("b-ph").style.display="none";document.getElementById("sl-before").src=url;}
+    else{aUrl=url;var img=document.getElementById("a-img");img.src=url;img.style.display="block";document.getElementById("a-ph").style.display="none";document.getElementById("sl-after").src=url;}
+    if(bUrl&&aUrl){document.getElementById("ba-slider").style.display="block";initSlider();}
+  };
+  reader.readAsDataURL(file);
+}
+function initSlider(){
+  var c=document.getElementById("compare-wrap");var bw=document.getElementById("sl-bwrap");var d=document.getElementById("sl-div");var bi=document.getElementById("sl-before");
+  function setPos(pct){pct=Math.max(2,Math.min(98,pct));bw.style.width=pct+"%";d.style.left=pct+"%";bi.style.minWidth=(100/pct*100)+"%";}
+  function getPos(e,el){var r=el.getBoundingClientRect();var x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;return x/r.width*100;}
+  var drag=false;
+  c.addEventListener("mousedown",function(e){drag=true;setPos(getPos(e,c));});
+  c.addEventListener("touchstart",function(e){drag=true;setPos(getPos(e,c));},{passive:true});
+  window.addEventListener("mousemove",function(e){if(drag)setPos(getPos(e,c));});
+  window.addEventListener("touchmove",function(e){if(drag)setPos(getPos(e,c));},{passive:true});
+  window.addEventListener("mouseup",function(){drag=false;});
+  window.addEventListener("touchend",function(){drag=false;});
+}
+
+// ============================================================
+// SHARE
+// ============================================================
+function shareVia(m){
+  var url=encodeURIComponent(window.location.href);
+  var msg=encodeURIComponent("Check out ReinoviX! "+window.location.href);
+  closeModal("share-modal");
+  if(m==="native"&&navigator.share){navigator.share({title:"ReinoviX",url:window.location.href}).catch(function(){});return;}
+  var links={whatsapp:"https://wa.me/?text="+msg,sms:"sms:?body="+msg,email:"mailto:?subject=ReinoviX&body="+msg};
+  if(links[m]) window.open(links[m],"_blank");
+}
+function copyLink(){if(navigator.clipboard)navigator.clipboard.writeText(window.location.href).then(function(){toast("Copied!");});else toast("Copied!");}
+function exportData(){
+  var tb=S.projects.reduce(function(s,p){return s+p.budget;},0);
+  var ts=S.expenses.reduce(function(s,e){return s+e.amt;},0);
+  var txt="REINOVETOR SUMMARY\n"+new Date().toLocaleDateString()+"\n\nPROJECTS\n";
+  for(var i=0;i<S.projects.length;i++){var p=S.projects[i];txt+=p.name+": "+fmt(pSpent(p.name))+" / "+fmt(p.budget)+"\n";}
+  txt+="\nEXPENSES\n";
+  for(var i=0;i<S.expenses.length;i++){var e=S.expenses[i];txt+=e.date+" | "+e.proj+" | "+e.desc+" | "+fmt(e.amt)+"\n";}
+  txt+="\nTotal: "+fmt(ts)+" of "+fmt(tb);
+  var blob=new Blob([txt],{type:"text/plain"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="reinovetor.txt";a.click();toast("Exported!");
+}
+
+// ============================================================
+// PREMIUM
+// ============================================================
+function selPlan(plan){document.getElementById("p-monthly").classList.toggle("on",plan==="monthly");document.getElementById("p-yearly").classList.toggle("on",plan==="yearly");}
+function processPay(){
+  var name=document.getElementById("pay-name").value.trim();
+  var card=document.getElementById("pay-card").value.trim();
+  var exp=document.getElementById("pay-exp").value.trim();
+  var cvv=document.getElementById("pay-cvv").value.trim();
+  if(!name||card.length<16||exp.length<4||cvv.length<3){toast("Fill in all card details");return;}
+  var btn=document.getElementById("pay-btn"); btn.textContent="Processing..."; btn.disabled=true;
+  setTimeout(function(){
+    closeModal("pay-modal"); S.premium=true; save();
+    btn.textContent="Start Free Trial →"; btn.disabled=false;
+    ["pay-name","pay-card","pay-exp","pay-cvv"].forEach(function(id){var el=document.getElementById(id);if(el)el.value="";});
+    openModal("ok-modal");
+    document.getElementById("prem-status").style.display="block";
+    updateAILock(); renderAccount();
+  },2000);
+}
+function doCancelPrem(){closeModal("cancel-modal");S.premium=false;save();toast("Cancelled.");document.getElementById("prem-status").style.display="none";updateAILock();renderAccount();}
+function fmtCard(el){var v=el.value.replace(/\D/g,"").substring(0,16);el.value=v.replace(/(.{4})/g,"$1 ").trim();}
+function fmtExp(el){var v=el.value.replace(/\D/g,"").substring(0,4);if(v.length>=2)v=v.substring(0,2)+"/"+v.substring(2);el.value=v;}
+
+// ============================================================
+// ACCOUNT
+// ============================================================
+var editingField=null;
+function renderAccount(){
+  var acc=S.account||{};
+  var name=acc.name||"Space X"; var email=acc.email||"spacex@example.com";
+  setText("acc-name-display",name); setText("acc-email-display",email);
+  setText("acc-name-val",name); setText("acc-email-val",email);
+  setText("acc-phone-val",acc.phone||"Not set"); setText("acc-location-val",acc.location||"Not set");
+  document.getElementById("acc-badge").textContent=S.premium?"👑 Premium":"🆓 Free Plan";
+  setText("acc-plan-val",S.premium?"Premium Plan":"Free Plan");
+  setText("acc-proj-count",S.projects.length+(S.premium?" (Unlimited)":" / 3"));
+  var tb=S.projects.reduce(function(s,p){return s+p.budget;},0);
+  setText("acc-total-budget",fmt(tb));
+  setText("currency-val",acc.currency||"USD ($)");
+  setText("lang-val",acc.langName||"English");
+  var avatar=document.getElementById("acc-avatar"); if(avatar) avatar.textContent=name.charAt(0).toUpperCase();
+  var ntog=document.getElementById("notif-tog"); if(ntog) ntog.className="toggle "+(acc.notif?"on":"off");
+}
+function editField(field){
+  editingField=field;
+  var labels={name:"Full Name",email:"Email Address",phone:"Phone Number",location:"Location"};
+  var acc=S.account||{};
+  var vals={name:acc.name||"Space X",email:acc.email||"spacex@example.com",phone:acc.phone||"",location:acc.location||""};
+  setText("edit-title","Edit "+labels[field]); setText("edit-label",labels[field]);
+  var inp=document.getElementById("edit-input"); if(inp){inp.value=vals[field]||""; inp.focus();}
+  openModal("edit-modal");
+}
+function saveEditField(){
+  if(!editingField) return;
+  var inp=document.getElementById("edit-input"); if(!inp) return;
+  var val=inp.value.trim(); if(!val) return;
+  if(!S.account) S.account={};
+  S.account[editingField]=val; save(); closeModal("edit-modal"); renderAccount();
+  if(editingField==="name") applyLanguage();
+  toast("Saved!");
+}
+function toggleNotif(){
+  if(!S.account) S.account={};
+  S.account.notif=!S.account.notif; save();
+  var t=document.getElementById("notif-tog"); if(t) t.className="toggle "+(S.account.notif?"on":"off");
+  toast(S.account.notif?"Notifications on":"Notifications off");
+}
+function changeCurrency(){openModal("currency-modal");}
+function setCurrency(code,symbol){
+  if(!S.account) S.account={};
+  S.account.currency=code+" ("+symbol+")"; S.account.currSymbol=symbol;
+  localStorage.setItem("rv_currency", symbol);
+  save(); closeModal("currency-modal"); renderAccount();
+  renderBudget(); renderProjects();
+  toast("Currency: "+code+" "+symbol);
+}
+function confirmClearData(){
+  if(confirm("Clear ALL data? Cannot be undone!")){S=defaultState();save();toast("Cleared!");showPage("projects");syncNav("projects");syncTab("projects");}
+}
+
+// ============================================================
+// LANGUAGE MODAL
+// ============================================================
+function openLangModal(){
+  renderLangList("");
+  var inp=document.getElementById("lang-search"); if(inp) inp.value="";
+  openModal("lang-modal");
+}
+function renderLangList(filter){
+  var el=document.getElementById("lang-list"); if(!el) return;
+  var curLang=(S.account&&S.account.lang)||"en";
+  filter=(filter||"").toLowerCase();
+  el.innerHTML="";
+  for(var i=0;i<LANGS.length;i++){
+    var l=LANGS[i];
+    if(filter&&l.name.toLowerCase().indexOf(filter)<0&&l.native.toLowerCase().indexOf(filter)<0) continue;
+    var btn=document.createElement("button");
+    btn.className="lang-btn"+(l.code===curLang?" sel":"");
+    btn.innerHTML='<span class="lang-flag">'+l.flag+'</span><div class="lang-name">'+l.name+'<div class="lang-native">'+l.native+"</div></div>"+(l.code===curLang?'<span class="lang-check">✓</span>':"");
+    btn.setAttribute("data-code",l.code);
+    btn.setAttribute("data-name",l.name);
+    btn.onclick=function(){setLang(this.getAttribute("data-code"),this.getAttribute("data-name"));};
+    el.appendChild(btn);
+  }
+}
+function setLang(code,name){
+  if(!S.account) S.account={};
+  S.account.lang=code;
+  S.account.langName=name;
+  localStorage.setItem("rv_lang", code);
+  save();
+  closeModal("lang-modal");
+  applyLanguage();
+  renderAccount();
+  toast(name+" ✓");
+}
+
+// ============================================================
+// INIT
+// ============================================================
+function init(){
+  try {
+    var su=document.getElementById("share-url"); if(su) su.textContent=window.location.href;
+  } catch(e) { console.error("Init error:", e); }
+}
+try { init(); } catch(e){ console.error("Fatal init:", e); }
+</script>
+
+<script>
+// PWA Install Prompt only - service worker skipped for compatibility
+
+// PWA Install Prompt
+var deferredPrompt;
+window.addEventListener('beforeinstallprompt', function(e){
+  e.preventDefault();
+  deferredPrompt = e;
+  // Show install banner
+  var banner = document.getElementById('install-banner');
+  if(banner) banner.style.display='flex';
+});
+window.addEventListener('appinstalled', function(){
+  var banner = document.getElementById('install-banner');
+  if(banner) banner.style.display='none';
+  deferredPrompt = null;
+});
+function installApp(){
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(function(r){
+      deferredPrompt = null;
+      var banner = document.getElementById('install-banner');
+      if(banner) banner.style.display='none';
+    });
+  }
+}
+</script>
+<div id="install-banner" style="display:none;position:fixed;bottom:80px;left:12px;right:12px;background:linear-gradient(135deg,#0a2a0f,#1a4d1f);border:1px solid #2d7a3a;border-radius:16px;padding:14px 16px;z-index:9999;align-items:center;gap:12px;box-shadow:0 4px 24px rgba(0,0,0,0.5)">
+  <div style="font-size:28px">📲</div>
+  <div style="flex:1"><div style="font-size:13px;font-weight:800;color:#fff">Install ReinoviX</div><div style="font-size:11px;color:#86efac;margin-top:2px">Add to home screen for the best experience</div></div>
+  <button onclick="installApp()" style="background:#22c55e;color:#fff;border:none;border-radius:10px;padding:8px 14px;font-size:12px;font-weight:700;cursor:pointer">Install</button>
+  <button onclick="document.getElementById('install-banner').style.display='none'" style="background:none;border:none;color:#86efac;font-size:18px;cursor:pointer;padding:4px">✕</button>
+</div>
+</body>
+</html>
