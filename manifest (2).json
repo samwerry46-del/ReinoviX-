@@ -1,0 +1,13 @@
+{
+  "background_color": "#030c05",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "ReinoviX",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "ReinoviX",
+  "start_url": "/",
+  "theme_color": "#1e3a8a",
+  "id": "/ReionoviX-/",
+  "description": "Your renovetion"
+}
