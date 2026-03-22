@@ -1,13 +1,29 @@
 {
-  "background_color": "#030c05",
-  "dir": "ltr",
-  "display": "standalone",
   "name": "ReinoviX",
-  "orientation": "any",
-  "scope": "/",
   "short_name": "ReinoviX",
-  "start_url": "/",
-  "theme_color": "#1e3a8a",
-  "id": "/ReionoviX-/",
-  "description": "Your renovetion"
+  "description": "Your renovation command center",
+  "id": "/ReinoviX-/",
+  "start_url": "/ReinoviX-/",
+  "scope": "/ReinoviX-/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#030C05",
+  "theme_color": "#1E3A8A",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "lang": "en"
 }
+
