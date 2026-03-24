@@ -1,7 +1,7 @@
 {
   "name": "ReinoviX",
   "short_name": "ReinoviX",
-  "description": "Your renovation command center",
+  "description": "Your renovation companion app",
   "id": "/ReinoviX-/",
   "start_url": "/ReinoviX-/",
   "scope": "/ReinoviX-/",
@@ -20,10 +20,15 @@
       "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "categories": ["productivity", "utilities"],
   "lang": "en"
 }
-
