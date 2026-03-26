@@ -1,0 +1,8 @@
+{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "io.github.samwerry46_del.twa",
+        "sha256_cert_fingerprints": ["BD:2E:B8:95:C2:E2:F5:78:F2:D4:B0:86:06:FB:7B:84:B1:D3:03:AE:A8:3C:E4:BD:C4:8F:33:AC:02:6C:5C:F6"]
+      }
+    }]
