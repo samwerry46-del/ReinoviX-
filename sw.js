@@ -1,8 +1,7 @@
 // sw.js
 // Place this file at the ROOT of your GitHub Pages repo
-// Handles: PWA caching (offline support) + coordinates with FCM
-
-const CACHE_NAME = 'reinovix-v1';
+// Handles: PWA caching (offline support) + coordinates with 
+const CACHE_NAME = 'reinovix-v2';
 const OFFLINE_URLS = ['/ReinoviX-/', '/ReinoviX-/index.html'];
 
 // Install: cache the app shell
